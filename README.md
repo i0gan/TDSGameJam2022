@@ -1,7 +1,9 @@
 # TDSGameJam2022
 TDS GameJam 2022
 
+策划文档链接：
 
+[2022招新gj《Change the world》策划案 - Feishu Docs](https://thinkdifferent.feishu.cn/docs/doccnutJecW08ftEopMfVFUznMg)
 
 ## 主题公布
 

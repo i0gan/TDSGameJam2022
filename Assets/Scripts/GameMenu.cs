@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameMenu : MonoBehaviour
 {
@@ -14,6 +15,13 @@ public class GameMenu : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void LoadSelectLevelScene()
+    {
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex * 2);
+        AsyncOperation op = SceneManager.LoadSceneAsync("Scenes/SelectLevel");
+        op.allowSceneActivation = true;
     }
 
 }

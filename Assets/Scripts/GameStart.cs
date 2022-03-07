@@ -31,10 +31,10 @@ public class GameStart : MonoBehaviour
 
     IEnumerator ShowLoading()
     {
-        int times = 50; // 80
+        int times = 30; //时长3s
         for (int i = 0; i < times; i++)
         {
-            processSlider.value = (i / 50.0f); //设置进度条
+            processSlider.value = (i / 30.0f); //设置进度条
             yield return new WaitForSeconds(0.1f);
         }
         LoadGameMenuScene(); // 加载主场景
