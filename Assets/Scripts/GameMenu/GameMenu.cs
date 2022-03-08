@@ -22,7 +22,7 @@ public class GameMenu : MonoBehaviour
     {
         AudioManager.GetInstance.PlayAudio(AudioManager.AudioType.LevelStart);
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex * 2);
-        AsyncOperation op = SceneManager.LoadSceneAsync("Scenes/Level_1");
+        AsyncOperation op = SceneManager.LoadSceneAsync("Scenes/Level_I0gan");
         op.allowSceneActivation = true;
     }
 

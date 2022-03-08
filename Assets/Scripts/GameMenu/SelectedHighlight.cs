@@ -33,6 +33,7 @@ public class SelectedHighlight : MonoBehaviour, IPointerEnterHandler, IPointerEx
         //查找子对象，Image
         RawImage t = transform.Find("Image").GetComponent<RawImage>();
         t.enabled = true;
+        //Debug.Log("OnPointerEnter");
         //throw new System.NotImplementedException();
     }
 
