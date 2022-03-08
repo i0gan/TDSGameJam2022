@@ -7,6 +7,8 @@
 /[Oo]bj/
 /[Bb]uild/
 /[Bb]uilds/
+/ProjectSettings/
+/UserSettings/
 /[Ll]ogs/
 /[Mm]emoryCaptures/
 
