@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,13 +18,14 @@ public class AudioManager : MonoBehaviour
     {
         get { return m_Instance; }
     }
-    
+
     //配置 音频文件
     public enum AudioType
     {
         BGM_MainScene, // 主界面音乐
         BGM_GameScene, // 游戏音乐
         Clicked,       // 点击音效
+        Hover,         // 鼠标Hover音效
         LevelStart,    // 关卡点击开始音效
         gameStart,     // 游戏关卡音效
         GamePass,      // 关卡通过音效
@@ -43,6 +45,7 @@ public class AudioManager : MonoBehaviour
     private AudioClip mainBGM; // 主页面的bgm
     private AudioClip gameBGM; // 游戏中的BGM
     private AudioClip gameClickedAudio; // 游戏按钮点击音效
+    private AudioClip gameHoverAudio; // 游戏按钮点击音效
     private AudioClip levelStartAudio; // 
     private AudioClip gameStartAudio;
     private AudioClip gamePassAudio;
@@ -98,6 +101,12 @@ public class AudioManager : MonoBehaviour
                     gameClickedAudio = audioManager[i].audioClip;
                 } break;
 
+                case AudioType.Hover:
+                    {
+                        gameHoverAudio = audioManager[i].audioClip;
+                    }
+                    break;
+
                 default: break;
             }
 
@@ -119,7 +128,7 @@ public class AudioManager : MonoBehaviour
 
     }
 
-    public void PlayAudio(AudioType audioType, int index = 0)
+    public void PlayAudio(AudioType audioType)
     {
 
         switch (audioType)
@@ -151,7 +160,13 @@ public class AudioManager : MonoBehaviour
                 audioSource_Sound.clip = gameClickedAudio;
                 audioSource_Sound.Play();
             } break;
-            
+            case AudioType.Hover:
+                {
+                    audioSource_Sound.clip = gameHoverAudio;
+                    audioSource_Sound.Play();
+                }
+            break;
+
             default: break;
         }
     }

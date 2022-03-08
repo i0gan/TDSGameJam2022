@@ -14,6 +14,7 @@ public class GameStart : MonoBehaviour
         // 加载游戏菜单
         //Invoke("LoadGameMenuScene", 3.0f);
         StartCoroutine("ShowLoading");
+
     }
 
     // Update is called once per frame
