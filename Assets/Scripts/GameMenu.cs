@@ -20,7 +20,7 @@ public class GameMenu : MonoBehaviour
     public void LoadSelectLevelScene()
     {
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex * 2);
-        AsyncOperation op = SceneManager.LoadSceneAsync("Scenes/SelectLevel");
+        AsyncOperation op = SceneManager.LoadSceneAsync("Scenes/Level_1");
         op.allowSceneActivation = true;
     }
 
