@@ -4,7 +4,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using UnityEngine;
 
-public class ButtonAudioEvent : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class ButtonEffects : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     // Start is called before the first frame update
     void Start()
@@ -23,6 +23,7 @@ public class ButtonAudioEvent : MonoBehaviour, IPointerEnterHandler, IPointerExi
     void IPointerEnterHandler.OnPointerEnter(PointerEventData eventData)
     {
         AudioManager.GetInstance.PlayAudio(AudioManager.AudioType.Hover);
+        //transform.GetComponent<RectTransform>.scale = Vector3(0, )
     }
 
     void IPointerExitHandler.OnPointerExit(PointerEventData eventData)
