@@ -3,7 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Brown
+  - Blue
+  - Orange
+  - Yellow
+  - Rad
+  - Gray
+  - Grey
   layers:
   - Default
   - TransparentFX
