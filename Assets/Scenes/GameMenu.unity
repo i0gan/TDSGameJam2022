@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 93976581}
   - component: {fileID: 93976583}
   - component: {fileID: 93976582}
+  - component: {fileID: 93976584}
   m_Layer: 5
   m_Name: AboutPanel
   m_TagString: Untagged
@@ -201,6 +202,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 93976580}
   m_CullTransparentMesh: 1
+--- !u!95 &93976584
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 93976580}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 263bd1ec418d8564cb0fc9929c97ae12, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &109578948
 GameObject:
   m_ObjectHideFlags: 0
@@ -445,6 +466,7 @@ GameObject:
   - component: {fileID: 191248392}
   - component: {fileID: 191248394}
   - component: {fileID: 191248393}
+  - component: {fileID: 191248395}
   m_Layer: 5
   m_Name: SettingsPanel
   m_TagString: Untagged
@@ -512,6 +534,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 191248391}
   m_CullTransparentMesh: 1
+--- !u!95 &191248395
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 191248391}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 713cb3dddb6ab78429aa2f003b45d2ae, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &262911908
 GameObject:
   m_ObjectHideFlags: 0
@@ -3309,6 +3351,7 @@ GameObject:
   - component: {fileID: 1698171128}
   - component: {fileID: 1698171130}
   - component: {fileID: 1698171129}
+  - component: {fileID: 1698171131}
   m_Layer: 5
   m_Name: SelectLevelPanel
   m_TagString: Untagged
@@ -3381,6 +3424,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1698171127}
   m_CullTransparentMesh: 1
+--- !u!95 &1698171131
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1698171127}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d02ed47972364664693b4dba43705c7b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1953782098
 GameObject:
   m_ObjectHideFlags: 0
@@ -3394,7 +3457,7 @@ GameObject:
   - component: {fileID: 1953782101}
   - component: {fileID: 1953782100}
   m_Layer: 5
-  m_Name: Leve1
+  m_Name: Level
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
