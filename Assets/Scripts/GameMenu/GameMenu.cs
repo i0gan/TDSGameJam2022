@@ -9,6 +9,8 @@ public class GameMenu : MonoBehaviour
     private int maxLevel = 5;
     public Animator selectLevelAnimator; //选择关卡时，selectLevelPanel动画机
     public Text levelText;
+    public Slider settingsBGMVolmeSlider;
+    public Slider settingsBGEMVolmeSlider;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +27,7 @@ public class GameMenu : MonoBehaviour
     {
         AudioManager.GetInstance.PlayAudio(AudioManager.AudioType.LevelStart);
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex * 2);
-        AsyncOperation op = SceneManager.LoadSceneAsync("Scenes/Level_I0gan");
+        AsyncOperation op = SceneManager.LoadSceneAsync("Scenes/TestLevel");
         op.allowSceneActivation = true;
     }
 
@@ -65,6 +67,31 @@ public class GameMenu : MonoBehaviour
     public void StartGame()
     {
 
+    }
+    public void SettingsBGMActive(bool a)
+    {
+        if(!a)
+        {
+            AudioManager.GetInstance.AudioVolume(0.0f, true);
+        }
+        else
+        {
+            AudioManager.GetInstance.AudioVolume(1.0f, true);
+        }
+    }
+
+    public void SettingsAjustBGMVolme() //调整BGM音量
+    {
+        
+        AudioManager.GetInstance.AudioVolume(settingsBGMVolmeSlider.value, true);
+        //Debug.Log("i: " + i);
+    }
+
+    public void SettingsAjustBGEMVolme() //调整BGEM音量
+    {
+
+        AudioManager.GetInstance.AudioVolume(settingsBGMVolmeSlider.value, false);
+        //Debug.Log("i: " + i);
     }
 
 }

@@ -52,6 +52,7 @@ public class AudioManager : MonoBehaviour
     private AudioClip gameFailAudio;
 
     private AudioClip gameGetScoreAudio;
+    private Boolean isPlayBGM = true;
 
 
     //背景音乐播放器
