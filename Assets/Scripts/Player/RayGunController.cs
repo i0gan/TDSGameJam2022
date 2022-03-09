@@ -35,6 +35,7 @@ public class RayGunController : MonoBehaviour{
         RaycastHit2D info = Physics2D.Raycast(ray.origin, ray.direction, 100, 1 << 7, -10);
 
         if (info.collider != null){
+            Debug.Log(info.collider.name);
             hitObj = info.collider.gameObject;
             hitPos = new Vector3(info.point.x, info.point.y, transform.position.z);
             //绘制框选效果
