@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4528040674734678622}
   - component: {fileID: 7534441637619188602}
   - component: {fileID: 6097967843434666496}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GreyBolck
   m_TagString: Grey
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4467133072027415819}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.77, y: -1.8, z: 1.291979}
+  m_LocalPosition: {x: -5.77, y: -1.8, z: 0}
   m_LocalScale: {x: 1.472075, y: 0.18061124, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
