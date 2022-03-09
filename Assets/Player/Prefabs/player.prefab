@@ -138,6 +138,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   jumpSpeed: 10
+  OrangeJumpSpeed: 10
+  OrangeJumpTime: 1
 --- !u!95 &2736778834410892159
 Animator:
   serializedVersion: 3
