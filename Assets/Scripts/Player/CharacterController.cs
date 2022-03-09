@@ -8,7 +8,8 @@ public class CharacterController : MonoBehaviour{
     public float speed = 14;
     public float jumpSpeed = 7;
     public float OrangeJumpSpeed = 7;
-    public float deadHeight = -100;
+    public float BlueSpeed = 40;
+
     private int Score = 0;
 
     private bool CanJump = false;
@@ -18,7 +19,6 @@ public class CharacterController : MonoBehaviour{
 
     void Start(){
         rb = GetComponent<Rigidbody2D>();
-        //startPos = transform.position;
     }
 
     // Update is called once per frame

@@ -8,10 +8,11 @@ public class LevelUI : MonoBehaviour
 {
     public Slider settingsBGMVolmeSlider;
     public Slider settingsBGEMVolmeSlider;
+    public Text coinText;
     // Start is called before the first frame update
     void Start()
     {
-        
+        SetScoresNumber(0);
     }
 
     // Update is called once per frame
@@ -49,10 +50,16 @@ public class LevelUI : MonoBehaviour
 
     public void ExitScene()
     {
-        AudioManager.GetInstance.PlayAudio(AudioManager.AudioType.LevelStart);
+        //AudioManager.GetInstance.PlayAudio(AudioManager.AudioType.LevelStart);
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex * 2);
         AsyncOperation op = SceneManager.LoadSceneAsync("Scenes/GameMenu");
         op.allowSceneActivation = true;
+    }
+    // 公共函数
+    public void SetScoresNumber(int number) // 设置UI 金币数
+    {
+        Debug.Log("xxxxx");
+        coinText.text = "Scores: " + number.ToString();
     }
 
 
