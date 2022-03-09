@@ -22,10 +22,7 @@ public class CharacterController : MonoBehaviour{
     }
 
     // Update is called once per frame
-    void Update(){
-        Move();
-        isCanJump();
-    }
+    
 
     //½ÇÉ«ÒÆ¶¯
     void Move(){
@@ -74,6 +71,7 @@ public class CharacterController : MonoBehaviour{
         Timer = Timer - Time.deltaTime;
     }
 
+    
 
 
 }

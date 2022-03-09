@@ -7,8 +7,8 @@
 /[Oo]bj/
 /[Bb]uild/
 /[Bb]uilds/
-/ProjectSettings/
-/UserSettings/
+ProjectSettings/
+UserSettings/
 /[Ll]ogs/
 /[Mm]emoryCaptures/
 
@@ -60,3 +60,5 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+/[Pp]rojectSettings/
+/[Uu]serSettings/
