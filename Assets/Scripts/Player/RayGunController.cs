@@ -5,6 +5,8 @@ using UnityEngine;
 public class RayGunController : MonoBehaviour{
     private LineRenderer lineRenderer;
     private GameObject targetObj;
+    public string ownedAbility = null;
+
     void Start(){
         targetObj = (GameObject)Instantiate(Resources.Load("Player/Prefabs/target"), new Vector3(-99,0,0), transform.rotation);
         lineRenderer = GetComponent<LineRenderer>();
@@ -57,15 +59,19 @@ public class RayGunController : MonoBehaviour{
         //实例化一个属性球
         GameObject attributeBall = (GameObject)Instantiate(Resources.Load("Player/Prefabs/attributeBall"), obj.transform.position, transform.rotation);
         attributeBall.GetComponent<AttributeBallController>().target = transform.gameObject;
-        Debug.Log("absorb " + obj.name);
+        attributeBall.GetComponent<AttributeBallController>().ability = obj.tag;
+        attributeBall.GetComponent<SpriteRenderer>().sprite = obj.GetComponent<SpriteRenderer>().sprite;
+        Debug.Log("absorb " + obj.name + " " + obj.tag);
     }
 
     void giveAbility(GameObject obj){
+        if (ownedAbility == null) return;
         //实例化一个属性球
-        GameObject attributeBall = (GameObject)Instantiate(Resources.Load("Player/Prefabs/attributeBall"), transform.position+ new Vector3(0,1,0), transform.rotation);
+        GameObject attributeBall = (GameObject)Instantiate(Resources.Load("Player/Prefabs/attributeBall"), transform.position, transform.rotation);
         attributeBall.GetComponent<AttributeBallController>().target = obj;
-        Debug.Log("give " + obj.name);
+        attributeBall.GetComponent<AttributeBallController>().ability = ownedAbility;
+        ownedAbility = null;
+        Debug.Log("give " + obj.name + " " + ownedAbility);
     }
-
 
 }

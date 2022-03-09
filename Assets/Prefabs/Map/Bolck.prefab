@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8396651077950949867}
   - component: {fileID: -6710497122400458545}
   - component: {fileID: 2229393803491668405}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bolck
   m_TagString: Rad
   m_Icon: {fileID: 0}
@@ -29,6 +29,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -7.63, y: -3.42, z: 0}
   m_LocalScale: {x: 0.4923492, y: 0.5071925, z: 0}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -129,3 +130,4 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 76d1d47d3188f37499e4a657678f39bf, type: 3}
   - {fileID: 21300000, guid: 14fbfad8df4f99a45913de767a3bc7dc, type: 3}
   - {fileID: 21300000, guid: 637a8f0fa8cdffd41b532fd6afcce73f, type: 3}
+  HowLongTime: 2
