@@ -57,6 +57,17 @@ public class RayGunController : MonoBehaviour{
     }
 
     void absorbAbility(GameObject obj){
+        //如果是蓝色方块则赋予巨大的速度
+        if (obj.tag == "Blue"){
+            Rigidbody2D rb = transform.gameObject.GetComponent<Rigidbody2D>();
+            CharacterController character = transform.gameObject.GetComponent<CharacterController>();
+
+            Vector3 direction = transform.position - obj.transform.position;
+            direction.Normalize();
+            rb.velocity = direction * character.BlueSpeed;
+            return;
+        }
+
         //实例化一个属性球
         GameObject attributeBall = (GameObject)Instantiate(Resources.Load("Player/Prefabs/attributeBall"), obj.transform.position, transform.rotation);
         attributeBall.GetComponent<AttributeBallController>().target = transform.gameObject;
@@ -71,7 +82,6 @@ public class RayGunController : MonoBehaviour{
         GameObject attributeBall = (GameObject)Instantiate(Resources.Load("Player/Prefabs/attributeBall"), transform.position, transform.rotation);
         attributeBall.GetComponent<AttributeBallController>().target = obj;
         attributeBall.GetComponent<AttributeBallController>().ability = ownedAbility;
-        ownedAbility = null;
         Debug.Log("give " + obj.name + " " + ownedAbility);
     }
 

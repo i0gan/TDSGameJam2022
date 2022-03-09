@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4424827451460258262}
   - component: {fileID: 7724032760877115634}
   - component: {fileID: 6277636825302872456}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: RadBolck
   m_TagString: Rad
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4485727904120757891}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.92, y: -1.8, z: 1.291979}
+  m_LocalPosition: {x: -3.92, y: -1.8, z: 0}
   m_LocalScale: {x: 1.472075, y: 0.18061124, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
