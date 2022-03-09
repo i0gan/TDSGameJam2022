@@ -10,8 +10,6 @@ public class CharacterController : MonoBehaviour{
     public float OrangeJumpSpeed = 7;
     public float BlueSpeed = 40;
 
-    private int Score = 0;
-
     private bool CanJump = false;
     private float Timer = 0;
     public float OrangeJumpTime = 2;
@@ -22,8 +20,7 @@ public class CharacterController : MonoBehaviour{
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update(){
         Move();
         isCanJump();
     }
@@ -50,11 +47,6 @@ public class CharacterController : MonoBehaviour{
     }
 
 
-    //加分方法
-    public void AddScore(){
-        Score++;
-        Debug.Log(Score);
-    }
     //碰到橙色物块跳动
     private void OnCollisionEnter2D(Collision2D collision){
         if (collision.gameObject.tag == "Orange"){
