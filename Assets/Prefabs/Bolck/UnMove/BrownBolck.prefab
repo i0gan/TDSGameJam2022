@@ -8,6 +8,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD:Assets/Prefabs/Bolck/UnMove/BrownBolck.prefab
   - component: {fileID: 6712725733542503715}
   - component: {fileID: 7859108131331165129}
   - component: {fileID: 4271746658498259693}
@@ -15,6 +16,15 @@ GameObject:
   m_Layer: 0
   m_Name: BrownBolck
   m_TagString: Brown
+=======
+  - component: {fileID: 4953863807792752385}
+  - component: {fileID: 8396651077950949867}
+  - component: {fileID: -6710497122400458545}
+  - component: {fileID: 2229393803491668405}
+  m_Layer: 7
+  m_Name: Bolck
+  m_TagString: Rad
+>>>>>>> ab66667a4fa248ea55fc84ed15c8a09c3d96ba2b:Assets/Prefabs/Map/Bolck.prefab
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25,10 +35,18 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Prefabs/Bolck/UnMove/BrownBolck.prefab
   m_GameObject: {fileID: 7942535447495023772}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 2.03, y: -1.8, z: 1.291979}
   m_LocalScale: {x: 1.472075, y: 0.18061124, z: 0}
+=======
+  m_GameObject: {fileID: 8623902318983225022}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.63, y: -3.42, z: 0}
+  m_LocalScale: {x: 0.4923492, y: 0.5071925, z: 0}
+  m_ConstrainProportionsScale: 0
+>>>>>>> ab66667a4fa248ea55fc84ed15c8a09c3d96ba2b:Assets/Prefabs/Map/Bolck.prefab
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -129,6 +147,9 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 76d1d47d3188f37499e4a657678f39bf, type: 3}
   - {fileID: 21300000, guid: 14fbfad8df4f99a45913de767a3bc7dc, type: 3}
   - {fileID: 21300000, guid: 637a8f0fa8cdffd41b532fd6afcce73f, type: 3}
+<<<<<<< HEAD:Assets/Prefabs/Bolck/UnMove/BrownBolck.prefab
   - {fileID: 21300000, guid: 2a2e31c2310dd6c4b8f73c16e85cf849, type: 3}
   - {fileID: 21300000, guid: 1c6a94bb183de854881f716b0fc3fadf, type: 3}
+=======
+>>>>>>> ab66667a4fa248ea55fc84ed15c8a09c3d96ba2b:Assets/Prefabs/Map/Bolck.prefab
   HowLongTime: 2
