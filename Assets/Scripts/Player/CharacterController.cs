@@ -22,13 +22,7 @@ public class CharacterController : MonoBehaviour{
     }
 
     // Update is called once per frame
-    void Update(){
-        //角色掉出场景则传送回起点
-        if (transform.position.y < deadHeight) 
-            reStart();
-        Move();
-        isCanJump();
-    }
+    
 
     //角色移动
     void Move(){
@@ -77,10 +71,7 @@ public class CharacterController : MonoBehaviour{
         Timer = Timer - Time.deltaTime;
     }
 
-    //重新开始游戏
-    public void reStart(){
-        //transform.position = startPos;
-    }
+    
 
 
 }
