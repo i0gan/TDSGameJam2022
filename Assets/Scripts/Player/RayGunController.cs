@@ -71,7 +71,6 @@ public class RayGunController : MonoBehaviour{
         GameObject attributeBall = (GameObject)Instantiate(Resources.Load("Player/Prefabs/attributeBall"), transform.position, transform.rotation);
         attributeBall.GetComponent<AttributeBallController>().target = obj;
         attributeBall.GetComponent<AttributeBallController>().ability = ownedAbility;
-        ownedAbility = null;
         Debug.Log("give " + obj.name + " " + ownedAbility);
     }
 
