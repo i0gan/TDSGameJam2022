@@ -48,12 +48,18 @@ public class CharacterController : MonoBehaviour{
 
 
     //碰到橙色物块跳动
+    //ghy3
     private void OnCollisionEnter2D(Collision2D collision){
-        if (collision.gameObject.tag == "Orange"){
-            rb.velocity = new Vector2(rb.velocity.x, OrangeJumpSpeed);
-            Timer = OrangeJumpTime;
-        }
+        
+            if (collision.gameObject.tag == "Orange")
+            {
+                rb.velocity = new Vector2(rb.velocity.x, OrangeJumpSpeed);
+                Timer = OrangeJumpTime;
+            }
+        
     }
+
+    
     //控制是否能空中跳跃
     private void isCanJump()
     {

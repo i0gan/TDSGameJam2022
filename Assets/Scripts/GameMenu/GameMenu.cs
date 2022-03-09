@@ -11,10 +11,15 @@ public class GameMenu : MonoBehaviour
     public Text levelText;
     public Slider settingsBGMVolmeSlider;
     public Slider settingsBGEMVolmeSlider;
+
+
+    public GameObject levelBtn;
+
     // Start is called before the first frame update
     void Start()
     {
         AudioManager.GetInstance.PlayAudio(AudioManager.AudioType.BGM_MainScene);
+        RefrashUIShow();
     }
 
     // Update is called once per frame
@@ -41,10 +46,11 @@ public class GameMenu : MonoBehaviour
 
     }
 
-    //刷新关卡显示字符串
-    public void RefrashShowText()
+    //刷新UI显示
+    public void RefrashUIShow()
     {
         levelText.text = "Level " + level.ToString();
+        ChangeLevelImageByLevelNumber(level);
     }
 
     public void OnClickLastChallLevel()
@@ -53,7 +59,7 @@ public class GameMenu : MonoBehaviour
         if (level <= 1) return;
         selectLevelAnimator.Play("ChangeLevel");
         level -= 1;
-        RefrashShowText();
+        RefrashUIShow();
     }
     public void OnClickNextChallLevel()
     {
@@ -61,7 +67,7 @@ public class GameMenu : MonoBehaviour
         if (level >= maxLevel) return;
         selectLevelAnimator.Play("ChangeLevel");
         level += 1;
-        RefrashShowText();
+        RefrashUIShow();
     }
 
     public void StartGame()
@@ -92,6 +98,31 @@ public class GameMenu : MonoBehaviour
 
         AudioManager.GetInstance.AudioVolume(settingsBGMVolmeSlider.value, false);
         //Debug.Log("i: " + i);
+    }
+
+    void ChangeLevelImageByLevelNumber(int levelNumber) // 更换关卡背景
+    {
+        // 更换背景, 全路径为： Assets/Resources/UI/GameMenu/Level_1_bg.png
+        levelBtn.GetComponent<Image>().sprite =  LoadSourceSprite("UI/GameMenu/Level_"+ level.ToString() + "_bg");
+    }
+
+    
+    private Sprite LoadSourceSprite(string relativePath)
+    {
+        //Debug.Log("relativePath=" + relativePath);
+        //把资源加载到内存中
+        UnityEngine.Object Preb = Resources.Load(relativePath, typeof(Sprite));
+        Sprite tmpsprite = null;
+        try
+        {
+            tmpsprite = Instantiate(Preb) as Sprite;
+        }
+        catch (System.Exception ex)
+        {
+            Debug.Log("load sprite NULL: " + relativePath + ex);
+        }
+        //用加载得到的资源对象，实例化游戏对象，实现游戏物体的动态加载
+        return tmpsprite;
     }
 
 }

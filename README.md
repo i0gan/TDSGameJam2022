@@ -5,6 +5,74 @@ TDS GameJam 2022
 
 [2022招新gj《Change the world》策划案 - Feishu Docs](https://thinkdifferent.feishu.cn/docs/doccnutJecW08ftEopMfVFUznMg)
 
+## 关卡选择图片替换
+
+### 图片要求：
+
+关卡截图 + 美化
+
+图片尺寸： 1000 x 600
+
+图片格式： png
+
+图片命名： Level_1_bg.png （代表关卡1的背景图）,  Level_2_bg.png （关卡2的背景图）， 总的需要5张。
+
+
+
+程序要求：
+
+Assets/Resources/UI/GameMenu/Level_xxxx.png 替换一下。
+
+
+
+
+
+
+## 音频播放
+
+音频播放脚本： Scripts/AudioManager.cs
+
+如何播放：
+
+```c#
+// 在自己的代码中加入 一句话播放音频代码，增加音频特效请看代码
+AudioManager.GetInstance.PlayAudio(AudioManager.AudioType.Fired); //通过枚举播放
+```
+
+加入完毕后，还需要从GameStart场景中运行，不然音频会未初始化报错。
+
+
+
+## UI函数如何调用
+
+在自己的代码中加入
+
+```c#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Level : MonoBehaviour
+{
+    // 需加入
+    public GameObject uiObj; // 先从界面将Canvas/GameLevelUI 对象赋予到该变量
+    // Start is called before the first frame update
+    void Start()
+    {
+        //调用方式：
+        uiObj.GetComponent<LevelUI>().SetScoresNumber(13434); // 设定UI显示分数。
+    }
+}
+
+```
+
+UI API
+
+```
+void SetScoresNumber(int score);       // 传入分数值
+void ShowGamePass(int score, int time); //显示游戏过关UI， 传入分数以及用时，用时单位为秒
+```
+
 
 
 ## Unity启动场景
