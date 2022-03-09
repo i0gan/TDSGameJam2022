@@ -18,4 +18,8 @@ public class TTT : MonoBehaviour
 
     }
     //BBBBBBBBBBBBBBBBBBBB
+    void AAA()
+    {
+
+    }
 }
