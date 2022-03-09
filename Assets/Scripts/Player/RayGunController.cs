@@ -57,6 +57,7 @@ public class RayGunController : MonoBehaviour{
     }
 
     void absorbAbility(GameObject obj){
+        AudioManager.GetInstance.PlayAudio(AudioManager.AudioType.Clicked);
         //如果是蓝色方块则赋予巨大的速度
         if (obj.tag == "Blue"){
             Rigidbody2D rb = transform.gameObject.GetComponent<Rigidbody2D>();
