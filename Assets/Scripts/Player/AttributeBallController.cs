@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AttributeBallController : MonoBehaviour{
     public GameObject target = null;
-    public float speed = 200;
+    public float speed = 400;
     public string ability = null;
 
 
