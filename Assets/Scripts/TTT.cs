@@ -11,8 +11,11 @@ public class TTT : MonoBehaviour
     }
 
     // Update is called once per frame
+    //BBBBBBBBBBBBBBBBBB
     void Update()
     {
         //AAAAAAAAAAAAAAAAAAAAAAAAAAA
+
     }
+    //BBBBBBBBBBBBBBBBBBBB
 }
