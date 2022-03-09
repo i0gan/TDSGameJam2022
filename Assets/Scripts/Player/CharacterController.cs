@@ -8,15 +8,26 @@ public class CharacterController : MonoBehaviour{
     public float speed = 14;
     public float jumpSpeed = 7;
     public float OrangeJumpSpeed = 7;
+    public float deadHeight = -100;
     private int Score = 0;
+
+    private bool CanJump = false;
+    private float Timer = 0;
+    public float OrangeJumpTime = 2;
+
 
     void Start(){
         rb = GetComponent<Rigidbody2D>();
+        //startPos = transform.position;
     }
 
     // Update is called once per frame
     void Update(){
+        //角色掉出场景则传送回起点
+        if (transform.position.y < deadHeight) 
+            reStart();
         Move();
+        isCanJump();
     }
 
     //角色移动
@@ -24,8 +35,7 @@ public class CharacterController : MonoBehaviour{
         //获取角色水平方向移动输入
         float horizontal = Input.GetAxis("Horizontal");
 
-        if (horizontal != 0)
-        {
+        if (horizontal != 0){
             rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
 
             //通过x轴缩放改变角色朝向
@@ -34,24 +44,42 @@ public class CharacterController : MonoBehaviour{
         }
 
         //角色跳跃
-        if (Input.GetButtonDown("Jump") && rb.velocity.y == 0)
+        if (Input.GetButtonDown("Jump")&& (rb.velocity.y == 0||CanJump==true))
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpSpeed);
         }
     }
+
+
     //加分方法
-    public void AddScore()
-    {
+    public void AddScore(){
         Score++;
         Debug.Log(Score);
     }
     //碰到橙色物块跳动
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Orange")
-        {
+    private void OnCollisionEnter2D(Collision2D collision){
+        if (collision.gameObject.tag == "Orange"){
             rb.velocity = new Vector2(rb.velocity.x, OrangeJumpSpeed);
+            Timer = OrangeJumpTime;
         }
+    }
+    //控制是否能空中跳跃
+    private void isCanJump()
+    {
+        if (Timer > 0)
+        {
+            CanJump = true;
+        }
+        else
+        {
+            CanJump = false;
+        }
+        Timer = Timer - Time.deltaTime;
+    }
+
+    //重新开始游戏
+    public void reStart(){
+        //transform.position = startPos;
     }
 
 

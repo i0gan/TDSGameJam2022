@@ -33,6 +33,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -86,7 +87,7 @@ SpriteRenderer:
   m_Size: {x: 0.24, y: 0.24}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!70 &2736778834410892154
@@ -128,7 +129,7 @@ Rigidbody2D:
   m_Constraints: 4
 --- !u!95 &2736778834410892159
 Animator:
-  serializedVersion: 3
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -141,6 +142,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
@@ -256,8 +258,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3b5934f387f7bb4c87f4234a2834eb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 14
-  jumpSpeed: 12
+  speed: 10
+  jumpSpeed: 10
+  OrangeJumpSpeed: 16
+  deadHeight: -100
 --- !u!114 &7182554173443689815
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -270,4 +274,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 848e8afaf15596746a90b3e8da679cb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetObj: {fileID: 0}
+  ownedAbility: 

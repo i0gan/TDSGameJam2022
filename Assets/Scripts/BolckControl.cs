@@ -9,6 +9,7 @@ public class BolckControl : MonoBehaviour
     private SpriteRenderer sr;
     private BoxCollider2D bc;
     public float HowLongTime = 2;
+    private bool PurpleCanKill = true;
     //获取系统精灵渲染器SpriteRenderer组件
     private void Awake()
     {
@@ -55,7 +56,11 @@ public class BolckControl : MonoBehaviour
         }
         else if (gameObject.tag == "DeadLine")
         {
-            sr.sprite = BolckSprite[4]; ;
+            sr.sprite = BolckSprite[6]; 
+        }
+        else if (gameObject.tag == "Purple")
+        {
+            sr.sprite = BolckSprite[5]; 
         }
     }
     //是否具有碰撞体
@@ -85,6 +90,10 @@ public class BolckControl : MonoBehaviour
         {
             bc.enabled = true;
         }
+        else if (gameObject.tag == "Purple")
+        {
+            bc.enabled = true; 
+        }
     }
 
     //物块是否为触发器
@@ -94,6 +103,7 @@ public class BolckControl : MonoBehaviour
         {
             bc.isTrigger = false;
         }
+        
         else if (gameObject.tag == "Orange")
         {
             bc.isTrigger = false;
@@ -107,6 +117,10 @@ public class BolckControl : MonoBehaviour
             bc.isTrigger = true;
         }
         else if (gameObject.tag == "DeadLine")
+        {
+            bc.isTrigger = true;
+        }
+        else if (gameObject.tag == "Purple")
         {
             bc.isTrigger = true;
         }
@@ -128,6 +142,13 @@ public class BolckControl : MonoBehaviour
             else if (gameObject.tag == "DeadLine")
             {
                 //重载场景
+            }
+            else if (gameObject.tag == "Purple")
+            {
+                if (PurpleCanKill)
+                {
+                    //重载场景
+                }
             }
         }
     }
@@ -155,6 +176,6 @@ public class BolckControl : MonoBehaviour
     //红和deadline功能完成（整合时候将重载当前场景的代码补全即可）
     //未完成：
     //蓝色物块功能未完成，计划在主角脚本完成
-    //紫色物块功能未完成，计划单独写一个预制体
+    //紫色物块伤害功能未完成，计划通过主角脚本吸取紫色物块时候改变PurpleCanKill来控制是否有伤害
 
 }

@@ -4,7 +4,19 @@
 TagManager:
   serializedVersion: 2
   tags:
+<<<<<<< HEAD
+  - Brown
+  - Blue
+  - Orange
+  - Yellow
+  - Rad
+  - Gray
+  - Grey
+  - DeadLine
+  - Purple
+=======
   - block
+>>>>>>> ab66667a4fa248ea55fc84ed15c8a09c3d96ba2b
   layers:
   - Default
   - TransparentFX
