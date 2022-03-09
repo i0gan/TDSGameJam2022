@@ -27,7 +27,7 @@ public class GameMenu : MonoBehaviour
     {
         AudioManager.GetInstance.PlayAudio(AudioManager.AudioType.LevelStart);
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex * 2);
-        AsyncOperation op = SceneManager.LoadSceneAsync("Scenes/TestLevel");
+        AsyncOperation op = SceneManager.LoadSceneAsync("Scenes/Levels/Level_" + level.ToString());
         op.allowSceneActivation = true;
     }
 

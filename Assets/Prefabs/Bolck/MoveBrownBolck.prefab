@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 9193523092253718425}
   - component: {fileID: 4880238688325070563}
   - component: {fileID: 3090651969954611689}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MoveBrownBolck
   m_TagString: Brown
   m_Icon: {fileID: 0}
@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3090651969954611688}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.03, y: -1.8, z: 1.291979}
+  m_LocalPosition: {x: 2.03, y: -1.8, z: 0}
   m_LocalScale: {x: 1.472075, y: 0.18061124, z: 0}
   m_Children: []
   m_Father: {fileID: 0}

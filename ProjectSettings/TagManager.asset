@@ -4,19 +4,14 @@
 TagManager:
   serializedVersion: 2
   tags:
-<<<<<<< HEAD
-  - Brown
-  - Blue
-  - Orange
-  - Yellow
-  - Rad
-  - Gray
+  - block
   - Grey
   - DeadLine
+  - Orange
+  - Rad
+  - Yellow
   - Purple
-=======
-  - block
->>>>>>> ab66667a4fa248ea55fc84ed15c8a09c3d96ba2b
+  - Brown
   layers:
   - Default
   - TransparentFX
@@ -24,9 +19,9 @@ TagManager:
   - 
   - Water
   - UI
-  - player
-  - blocks
-  - attributeBall
+  - Player
+  - Bolcks
+  - 
   - 
   - 
   - 

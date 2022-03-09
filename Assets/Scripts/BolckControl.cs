@@ -68,7 +68,7 @@ public class BolckControl : MonoBehaviour
     {
         if (gameObject.tag == "Grey")
         {
-            bc.enabled = false;
+            bc.enabled = true;
         }
         else if (gameObject.tag == "Brown")
         {
@@ -99,11 +99,16 @@ public class BolckControl : MonoBehaviour
     //物块是否为触发器
     private void isTrigger()
     {
+        
         if (gameObject.tag == "Brown")
         {
             bc.isTrigger = false;
         }
-        
+
+        else if (gameObject.tag == "Grey")
+        {
+            bc.isTrigger = true;
+        }
         else if (gameObject.tag == "Orange")
         {
             bc.isTrigger = false;

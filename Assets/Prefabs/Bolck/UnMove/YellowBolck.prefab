@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2720383826274295236}
   - component: {fileID: 8329932448249740512}
   - component: {fileID: 5743847491459425690}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: YellowBolck
   m_TagString: Yellow
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2803519844854483601}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.91, y: -1.8, z: 1.291979}
+  m_LocalPosition: {x: -1.91, y: -1.8, z: 0}
   m_LocalScale: {x: 1.472075, y: 0.18061124, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
