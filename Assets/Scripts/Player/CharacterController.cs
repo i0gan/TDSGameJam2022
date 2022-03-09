@@ -10,17 +10,15 @@ public class CharacterController : MonoBehaviour{
     public float OrangeJumpSpeed = 7;
     public float deadHeight = -100;
     private int Score = 0;
-<<<<<<< HEAD:Assets/Player/Scripts/CharacterController.cs
+
     private bool CanJump = false;
     private float Timer = 0;
     public float OrangeJumpTime = 2;
-=======
-    private Vector3 startPos;
->>>>>>> ab66667a4fa248ea55fc84ed15c8a09c3d96ba2b:Assets/Scripts/Player/CharacterController.cs
+
 
     void Start(){
         rb = GetComponent<Rigidbody2D>();
-        startPos = transform.position;
+        //startPos = transform.position;
     }
 
     // Update is called once per frame
@@ -46,12 +44,8 @@ public class CharacterController : MonoBehaviour{
         }
 
         //角色跳跃
-<<<<<<< HEAD:Assets/Player/Scripts/CharacterController.cs
         if (Input.GetButtonDown("Jump")&& (rb.velocity.y == 0||CanJump==true))
         {
-=======
-        if (Input.GetButtonDown("Jump") && rb.velocity.y == 0){
->>>>>>> ab66667a4fa248ea55fc84ed15c8a09c3d96ba2b:Assets/Scripts/Player/CharacterController.cs
             rb.velocity = new Vector2(rb.velocity.x, jumpSpeed);
         }
     }
@@ -85,7 +79,7 @@ public class CharacterController : MonoBehaviour{
 
     //重新开始游戏
     public void reStart(){
-        transform.position = startPos;
+        //transform.position = startPos;
     }
 
 
