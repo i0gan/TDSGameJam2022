@@ -73,6 +73,29 @@ void SetScoresNumber(int score);       // 传入分数值
 void ShowGamePass(int score, int time); //显示游戏过关UI， 传入分数以及用时，用时单位为秒
 ```
 
+例子：进入场景后，3秒后自动过关：
+
+```c#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class LevelTest : MonoBehaviour
+{
+    // Start is called before the first frame update
+    public GameObject t;
+    void Start()
+    {
+        Invoke("GamePass", 3.0f);
+    }
+    void GamePass()
+    {
+        t.GetComponent<LevelUI>().ShowGamePass(1, 2); // 调用显示过关UI
+    }
+}
+
+```
+
 
 
 ## Unity启动场景
@@ -97,6 +120,8 @@ public enum AudioType
 
     }
 ```
+
+
 
 
 

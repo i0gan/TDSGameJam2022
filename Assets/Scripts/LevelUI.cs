@@ -8,7 +8,11 @@ public class LevelUI : MonoBehaviour
 {
     public Slider settingsBGMVolmeSlider;
     public Slider settingsBGEMVolmeSlider;
-    public Text coinText;
+    public GameObject gamePassPanel;
+    public Text scoreText;
+    public Text gamePassScoreText;
+    public Text gamePassTimeText;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -50,17 +54,31 @@ public class LevelUI : MonoBehaviour
 
     public void ExitScene()
     {
-        //AudioManager.GetInstance.PlayAudio(AudioManager.AudioType.LevelStart);
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex * 2);
+        GameMenu.isShowSelectPanel = false; // 是否显示Select界面
         AsyncOperation op = SceneManager.LoadSceneAsync("Scenes/GameMenu");
         op.allowSceneActivation = true;
     }
     // 公共函数
     public void SetScoresNumber(int number) // 设置UI 金币数
     {
-        Debug.Log("xxxxx");
-        coinText.text = "Scores: " + number.ToString();
+        scoreText.text = "Scores: " + number.ToString();
     }
 
+    public void ShowGamePass(int score, int time)
+    {
+        gamePassPanel.SetActive(true);
+        gamePassScoreText.text = "Scores: " + score.ToString();
+        gamePassTimeText.text = "Time: " + time.ToString();
+    }
+
+    public void OnClickNextLevel()
+    {
+        // Next
+        Debug.Log("OnClickNextLevel ");
+        GameMenu.isShowSelectPanel = true;
+        GameMenu.AddLevelNumber();
+        AsyncOperation op = SceneManager.LoadSceneAsync("Scenes/GameMenu");
+        op.allowSceneActivation = true;
+    }
 
 }

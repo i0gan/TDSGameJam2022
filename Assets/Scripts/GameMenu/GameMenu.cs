@@ -5,15 +5,19 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public class GameMenu : MonoBehaviour
 {
-    private int level = 1;
-    private int maxLevel = 5;
+    private static int level = 1; // 关卡
+    public static bool isShowSelectPanel = false; // 是否显示Select界面
+    
+    static private int maxLevel = 5;
     public Animator selectLevelAnimator; //选择关卡时，selectLevelPanel动画机
     public Text levelText;
     public Slider settingsBGMVolmeSlider;
     public Slider settingsBGEMVolmeSlider;
 
-
     public GameObject levelBtn;
+
+    public GameObject menuPanel;
+    public GameObject selectLevelPanel;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +31,17 @@ public class GameMenu : MonoBehaviour
     {
         
     }
+
+    public void ShowSelectPanelCall()
+    {
+        isShowSelectPanel = true;
+    }
+
+    public void CloseSelectPanelCall()
+    {
+        isShowSelectPanel = false;
+    }
+
     // Game Start
     public void LoadSelectLevelScene()
     {
@@ -49,31 +64,53 @@ public class GameMenu : MonoBehaviour
     //刷新UI显示
     public void RefrashUIShow()
     {
+        Debug.Log("isShowSelectPanel " + isShowSelectPanel.ToString());
         levelText.text = "Level " + level.ToString();
         ChangeLevelImageByLevelNumber(level);
+        if(isShowSelectPanel)
+        {
+            selectLevelPanel.SetActive(true);
+            menuPanel.SetActive(false);
+        }else
+        {
+            selectLevelPanel.SetActive(false);
+            menuPanel.SetActive(true);
+        }
     }
 
     public void OnClickLastChallLevel()
     {
         Debug.Log("点击上一关");
-        if (level <= 1) return;
+        if (!SubLevelNumber()) return;
         selectLevelAnimator.Play("ChangeLevel");
-        level -= 1;
         RefrashUIShow();
     }
     public void OnClickNextChallLevel()
     {
         Debug.Log("点击下一关");
-        if (level >= maxLevel) return;
+        if (!AddLevelNumber()) return;
         selectLevelAnimator.Play("ChangeLevel");
-        level += 1;
         RefrashUIShow();
+    }
+    public static bool AddLevelNumber()
+    {
+        if (level >= maxLevel) return false;
+        level += 1;
+        return true;
+    }
+
+    public static bool SubLevelNumber()
+    {
+        if (level <= 1) return false;
+        level -= 1;
+        return true;
     }
 
     public void StartGame()
     {
 
     }
+
     public void SettingsBGMActive(bool a)
     {
         if(!a)
