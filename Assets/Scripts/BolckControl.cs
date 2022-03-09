@@ -56,11 +56,11 @@ public class BolckControl : MonoBehaviour
         }
         else if (gameObject.tag == "DeadLine")
         {
-            sr.sprite = BolckSprite[4]; 
+            sr.sprite = BolckSprite[6]; 
         }
         else if (gameObject.tag == "Purple")
         {
-            sr.sprite = BolckSprite[6]; 
+            sr.sprite = BolckSprite[5]; 
         }
     }
     //是否具有碰撞体
@@ -103,6 +103,7 @@ public class BolckControl : MonoBehaviour
         {
             bc.isTrigger = false;
         }
+        
         else if (gameObject.tag == "Orange")
         {
             bc.isTrigger = false;
