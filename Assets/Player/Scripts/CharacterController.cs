@@ -7,6 +7,7 @@ public class CharacterController : MonoBehaviour{
 
     public float speed = 14;
     public float jumpSpeed = 7;
+    private int Score = 0;
 
     void Start(){
         rb = GetComponent<Rigidbody2D>();
@@ -36,6 +37,12 @@ public class CharacterController : MonoBehaviour{
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpSpeed);
         }
+    }
+    //加分方法
+    public void AddScore()
+    {
+        Score++;
+        Debug.Log(Score);
     }
 
 

@@ -8,6 +8,7 @@ public class BolckControl : MonoBehaviour
     public Sprite[] BolckSprite;//灰0褐1橙2黄3红4
     private SpriteRenderer sr;
     private BoxCollider2D bc;
+    public float HowLongTime = 2;
     //获取系统精灵渲染器SpriteRenderer组件
     private void Awake()
     {
@@ -26,9 +27,10 @@ public class BolckControl : MonoBehaviour
     {
         Look();
         isBox();
+        isTrigger();
     }
 
-    //外观
+    //外观（精灵）
     private void Look()
     {
         if (gameObject.tag == "Grey")
@@ -51,7 +53,12 @@ public class BolckControl : MonoBehaviour
         {
             sr.sprite = BolckSprite[4];
         }
+        else if (gameObject.tag == "DeadLine")
+        {
+            sr.sprite = BolckSprite[4]; ;
+        }
     }
+    //是否具有碰撞体
     private void isBox()
     {
         if (gameObject.tag == "Grey")
@@ -74,29 +81,80 @@ public class BolckControl : MonoBehaviour
         {
             bc.enabled = true;
         }
-    }
-    private void SelfDestroy()
-    {
-        if (gameObject.tag == "Grey")
+        else if (gameObject.tag == "DeadLine")
         {
-            sr.sprite = BolckSprite[0];
+            bc.enabled = true;
         }
-        else if (gameObject.tag == "Brown")
+    }
+
+    //物块是否为触发器
+    private void isTrigger()
+    {
+        if (gameObject.tag == "Brown")
         {
-            sr.sprite = BolckSprite[1];
+            bc.isTrigger = false;
         }
         else if (gameObject.tag == "Orange")
         {
-            sr.sprite = BolckSprite[2];
+            bc.isTrigger = false;
         }
         else if (gameObject.tag == "Yellow")
         {
-            sr.sprite = BolckSprite[3];
+            bc.isTrigger = true;
         }
         else if (gameObject.tag == "Rad")
         {
-            sr.sprite = BolckSprite[4];
+            bc.isTrigger = true;
+        }
+        else if (gameObject.tag == "DeadLine")
+        {
+            bc.isTrigger = true;
         }
     }
+    //触发检测
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+            if(gameObject.tag== "Yellow")
+            {
+                Destroy(gameObject);
+                GameObject.Find("player").SendMessage("AddScore");
+            }
+            else if (gameObject.tag == "Rad")
+            {
+                //重载场景
+            }
+            else if (gameObject.tag == "DeadLine")
+            {
+                //重载场景
+            }
+        }
+    }
+    //碰撞检测
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            if(gameObject.tag== "Brown")
+            {
+                Invoke("Destroy", HowLongTime);
+            }
+        }
+    }
+
+    //摧毁物块方法
+    private void Destroy()
+    {
+        Destroy(this.gameObject);
+    }
+
+    //Readme:
+    //褐，黄接触player消失的功能完成（可以通过改变物块BlockControl脚本来设置褐色物块延迟销毁场景）
+    //黄物块加分功能完成（分数Score存储在主角脚本CharcterControler，接下来和UI挂接即可）
+    //红和deadline功能完成（整合时候将重载当前场景的代码补全即可）
+    //未完成：
+    //蓝色物块功能未完成，计划在主角脚本完成
+    //紫色物块功能未完成，计划单独写一个预制体
+
 }
- 
