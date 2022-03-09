@@ -15,7 +15,14 @@ public class TTT : MonoBehaviour
     void Update()
     {
         //AAAAAAAAAAAAAAAAAAAAAAAAAAA
+        //BBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
 
     }
     //BBBBBBBBBBBBBBBBBBBB
+
+   
+    void BBBB()
+    {
+
+    }
 }
