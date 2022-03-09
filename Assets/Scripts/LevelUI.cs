@@ -55,8 +55,10 @@ public class LevelUI : MonoBehaviour
         AsyncOperation op = SceneManager.LoadSceneAsync("Scenes/GameMenu");
         op.allowSceneActivation = true;
     }
+    // 公共函数
     public void SetScoresNumber(int number) // 设置UI 金币数
     {
+        Debug.Log("xxxxx");
         coinText.text = "Scores: " + number.ToString();
     }
 

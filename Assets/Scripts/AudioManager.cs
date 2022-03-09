@@ -31,6 +31,7 @@ public class AudioManager : MonoBehaviour
         GamePass,      // 关卡通过音效
         GameFail,      // 关卡失败音效
         GameGetScore,  // 得分音效
+        Fired, // 开枪
 
     }
 
@@ -52,6 +53,7 @@ public class AudioManager : MonoBehaviour
     private AudioClip gameFailAudio;
 
     private AudioClip gameGetScoreAudio;
+    private AudioClip firedAudio;
     private Boolean isPlayBGM = true;
 
 
@@ -102,7 +104,11 @@ public class AudioManager : MonoBehaviour
                     gameClickedAudio = audioManager[i].audioClip;
                 } break;
 
-                case AudioType.Hover:
+                case AudioType.Hover: {
+                        gameHoverAudio = audioManager[i].audioClip;
+                } break;
+
+                case AudioType.Fired:
                     {
                         gameHoverAudio = audioManager[i].audioClip;
                     }
@@ -167,6 +173,12 @@ public class AudioManager : MonoBehaviour
                     audioSource_Sound.Play();
                 }
             break;
+            case AudioType.Fired:
+                {
+                    audioSource_Sound.clip = firedAudio;
+                    audioSource_Sound.Play();
+                }
+                break;
 
             default: break;
         }
