@@ -22,7 +22,12 @@ public class CharacterController : MonoBehaviour{
     }
 
     // Update is called once per frame
-    
+    void Update()
+    {
+        Move();
+        isCanJump();
+    }
+
 
     //½ÇÉ«ÒÆ¶¯
     void Move(){
