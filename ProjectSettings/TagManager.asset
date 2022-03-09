@@ -12,6 +12,7 @@ TagManager:
   - Yellow
   - Purple
   - Brown
+  - Blue
   layers:
   - Default
   - TransparentFX
