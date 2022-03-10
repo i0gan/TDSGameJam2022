@@ -2,29 +2,38 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameController{
-    public static bool isInit;
-    public static int score = 0;
-    public static GameObject uiObj;
+public class GameController:MonoBehaviour{
+    public int score = 0;
+    public float time = 0;
+    public LevelUI ui;
 
-    public static void Init(){
-        uiObj = GameObject.Find("Canvas/GameLevelUI");
+    
+    public void Init(){
+        ui = GameObject.Find("Canvas/GameLevelUI").GetComponent<LevelUI>();
+        score = 0;
+        time = 0;
     }
 
-    public static void addScore(int point){
-        if (isInit == false) Init();
+    void Start(){
+        Init();
+    }
+    void Update(){
+        time += Time.deltaTime;
+    }
+
+    public void addScore(int point){
         score += point;
-        uiObj.GetComponent<LevelUI>().SetScoresNumber(score);
+        ui.SetScoresNumber(score);
     }
 
-    public static void gameOver(){
+    public void gameOver(){
         score = 0;
     }
 
-    public static void reStart(){
+    public void reStart(){
 
     }
-    public static void victory(){
+    public void victory(){
 
     }
 }
