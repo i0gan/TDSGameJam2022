@@ -37,24 +37,29 @@ public class RayGunController : MonoBehaviour{
         Ray2D ray = new Ray2D(transform.position, mousePos - transform.position);
         RaycastHit2D info = Physics2D.Raycast(ray.origin, ray.direction, 100, 1 << 7, -10);
 
+
+
         if (info.collider != null){
             hitObj = info.collider.gameObject;
             hitPos = new Vector3(info.point.x, info.point.y, transform.position.z);
-            //绘制框选效果
-            targetObj.transform.position = hitObj.transform.position;
 
-            //吸收物体的属性
-            if (Input.GetMouseButtonDown(1)) absorbAbility(hitObj);
+            //绘制射线(绘制在最下层,所以z轴坐标加1)
+            lineRenderer.SetPosition(0, transform.position + new Vector3(0, 0, 1));
+            lineRenderer.SetPosition(1, hitPos + new Vector3(0, 0, 1));
 
-            //赋予物体属性
-            if (Input.GetMouseButtonDown(0)) giveAbility(hitObj);
+            if (hitObj.tag != "Tile"){
+                //绘制框选效果
+                targetObj.transform.position = hitObj.transform.position;
+
+                //吸收物体的属性
+                if (Input.GetMouseButtonDown(1)) absorbAbility(hitObj);
+
+                //赋予物体属性
+                if (Input.GetMouseButtonDown(0)) giveAbility(hitObj);
+            }
+
         }
         else hitPos = mousePos;
-
-
-        //绘制射线(绘制在最下层,所以z轴坐标加1)
-        lineRenderer.SetPosition(0, transform.position + new Vector3(0,0,1));
-        lineRenderer.SetPosition(1, hitPos + new Vector3(0, 0, 1));
 
     }
 
