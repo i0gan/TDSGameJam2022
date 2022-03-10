@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameController:MonoBehaviour{
     public int score = 0;
@@ -24,15 +25,10 @@ public class GameController:MonoBehaviour{
     public void addScore(int point){
         score += point;
         ui.SetScoresNumber(score);
-        if(score>30) victory();
-    }
-
-    public void gameOver(){
-        score = 0;
     }
 
     public void reStart(){
-
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
     public void victory(){
         ui.ShowGamePass(score, (int)time);

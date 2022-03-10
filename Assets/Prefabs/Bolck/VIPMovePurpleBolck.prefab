@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6009385876985830334
+--- !u!1 &6289327247397301751
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,25 +8,24 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6950260427916993025}
-  - component: {fileID: 5786285773653150955}
-  - component: {fileID: 438088870972550607}
-  - component: {fileID: 4196092820438070453}
-  - component: {fileID: 6009385876985830329}
+  - component: {fileID: 7231026569236583496}
+  - component: {fileID: 6080010214093781666}
+  - component: {fileID: 160417455132285830}
+  - component: {fileID: 6289327247397301744}
   m_Layer: 7
-  m_Name: MovePurpleBolck
+  m_Name: VIPMovePurpleBolck
   m_TagString: Purple
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6950260427916993025
+--- !u!4 &7231026569236583496
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6009385876985830334}
+  m_GameObject: {fileID: 6289327247397301751}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 0}
@@ -34,13 +33,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &5786285773653150955
+--- !u!212 &6080010214093781666
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6009385876985830334}
+  m_GameObject: {fileID: 6289327247397301751}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -86,13 +85,13 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &438088870972550607
+--- !u!61 &160417455132285830
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6009385876985830334}
+  m_GameObject: {fileID: 6289327247397301751}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -112,35 +111,13 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.2688115, y: 4.035178}
   m_EdgeRadius: 0
---- !u!114 &4196092820438070453
+--- !u!114 &6289327247397301744
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6009385876985830334}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b245e0d4f9a6854c87f228d3d5c26fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BolckSprite:
-  - {fileID: 21300000, guid: b0bf1f51cc61fe344a07e2ab39fc4ae6, type: 3}
-  - {fileID: 21300000, guid: 577e6959987123347ba14169beeaad58, type: 3}
-  - {fileID: 21300000, guid: e75135e1ab70b994bb16f3a1a5957974, type: 3}
-  - {fileID: 21300000, guid: cc728d0f11f87944bacd4c5e69f097fe, type: 3}
-  - {fileID: 21300000, guid: 28d7184ad81a8074ea893d16c1124924, type: 3}
-  - {fileID: 21300000, guid: 790d5960f1ec566429e83c511bb78be0, type: 3}
-  - {fileID: 21300000, guid: 1c6a94bb183de854881f716b0fc3fadf, type: 3}
-  - {fileID: 21300000, guid: cfe356c47d7828f4f926527b577ec479, type: 3}
-  HowLongTime: 2
---- !u!114 &6009385876985830329
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6009385876985830334}
+  m_GameObject: {fileID: 6289327247397301751}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 67f99f48c0bfb5544bd0399a14308a08, type: 3}

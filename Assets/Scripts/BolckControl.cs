@@ -154,17 +154,17 @@ public class BolckControl : MonoBehaviour
             }
             else if (gameObject.tag == "Rad")
             {
-                //重载场景
+                GameObject.Find("player").SendMessage("reStart");
             }
             else if (gameObject.tag == "DeadLine")
             {
-                //重载场景
+                GameObject.Find("player").SendMessage("reStart");
             }
             else if (gameObject.tag == "Purple")
             {
                 if (PurpleCanKill)
                 {
-                    //重载场景
+                    GameObject.Find("player").SendMessage("reStart");
                 }
             }
         }
@@ -190,7 +190,6 @@ public class BolckControl : MonoBehaviour
     //Readme:
     //褐，黄接触player消失的功能完成（可以通过改变物块BlockControl脚本来设置褐色物块延迟销毁场景）
     //黄物块加分功能完成（分数Score存储在主角脚本CharcterControler，接下来和UI挂接即可）
-    //红和deadline功能完成（整合时候将重载当前场景的代码补全即可）
     //未完成：
     //蓝色物块功能未完成，计划在主角脚本完成
     //紫色物块伤害功能未完成，计划通过主角脚本吸取紫色物块时候改变PurpleCanKill来控制是否有伤害
