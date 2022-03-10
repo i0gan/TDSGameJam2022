@@ -12,6 +12,8 @@ TagManager:
   - Purple
   - Brown
   - Blue
+  - Tile
+  - GameVictory
   layers:
   - Default
   - TransparentFX
@@ -19,7 +21,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - blocks
   - 
   - 
   - 

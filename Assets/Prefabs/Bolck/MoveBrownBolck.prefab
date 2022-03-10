@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 9193523092253718425}
   - component: {fileID: 4880238688325070563}
   - component: {fileID: 3090651969954611689}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: MoveBrownBolck
   m_TagString: Brown
   m_Icon: {fileID: 0}
@@ -28,8 +28,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3090651969954611688}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.03, y: -1.8, z: 0}
-  m_LocalScale: {x: 1.472075, y: 0.18061124, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 357e5f3968b926e438af37844761a291, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 577e6959987123347ba14169beeaad58, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -99,18 +99,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.00052800775, y: 0.00307554}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.59, y: 0.59}
+    oldSize: {x: 1.28, y: 1.28}
     newSize: {x: 0.59, y: 0.59}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.59, y: 0.59}
+  m_Size: {x: 1.2709601, y: 1.2682401}
   m_EdgeRadius: 0
 --- !u!114 &4880238688325070563
 MonoBehaviour:
@@ -125,12 +125,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BolckSprite:
-  - {fileID: 21300000, guid: fcb10034f721b74468c0f30fc05c6ad3, type: 3}
-  - {fileID: 21300000, guid: 357e5f3968b926e438af37844761a291, type: 3}
-  - {fileID: 21300000, guid: 76d1d47d3188f37499e4a657678f39bf, type: 3}
-  - {fileID: 21300000, guid: 14fbfad8df4f99a45913de767a3bc7dc, type: 3}
-  - {fileID: 21300000, guid: 637a8f0fa8cdffd41b532fd6afcce73f, type: 3}
-  - {fileID: 21300000, guid: 2a2e31c2310dd6c4b8f73c16e85cf849, type: 3}
+  - {fileID: 21300000, guid: b0bf1f51cc61fe344a07e2ab39fc4ae6, type: 3}
+  - {fileID: 21300000, guid: 577e6959987123347ba14169beeaad58, type: 3}
+  - {fileID: 21300000, guid: e75135e1ab70b994bb16f3a1a5957974, type: 3}
+  - {fileID: 21300000, guid: cc728d0f11f87944bacd4c5e69f097fe, type: 3}
+  - {fileID: 21300000, guid: 28d7184ad81a8074ea893d16c1124924, type: 3}
+  - {fileID: 21300000, guid: 790d5960f1ec566429e83c511bb78be0, type: 3}
   - {fileID: 21300000, guid: 1c6a94bb183de854881f716b0fc3fadf, type: 3}
   HowLongTime: 2
 --- !u!114 &3090651969954611689
