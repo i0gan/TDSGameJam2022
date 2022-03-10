@@ -65,18 +65,11 @@ public class RayGunController : MonoBehaviour{
 
     void absorbAbility(GameObject obj){
         if(obj.tag == null) return;
-        //如果是蓝色方块则赋予巨大的速度
-        if (obj.tag == "Blue"){
-            Rigidbody2D rb = transform.gameObject.GetComponent<Rigidbody2D>();
-            CharacterController character = transform.gameObject.GetComponent<CharacterController>();
-
-            Vector3 direction = transform.position - obj.transform.position;
-            direction.Normalize();
-            rb.velocity = direction * character.BlueSpeed;
-            return;
-        }
 
         //实例化一个属性球
+        if(obj.tag == "Purple"){
+            obj.GetComponent<BolckControl>().PurpleCanKill = false;
+        }
         GameObject attributeBall = (GameObject)Instantiate(Resources.Load("Player/Prefabs/attributeBall"), obj.transform.position, transform.rotation);
         attributeBall.GetComponent<AttributeBallController>().target = transform.gameObject;
         attributeBall.GetComponent<AttributeBallController>().ability = obj.tag;
@@ -87,6 +80,17 @@ public class RayGunController : MonoBehaviour{
 
     void giveAbility(GameObject obj){
         if (ownedAbility == null) return;
+        //如果是蓝色则赋予巨大的速度
+        if (ownedAbility == "Blue"){
+            if (obj.tag != "Blue") return;
+            Rigidbody2D rb = transform.gameObject.GetComponent<Rigidbody2D>();
+            CharacterController character = transform.gameObject.GetComponent<CharacterController>();
+
+            Vector3 direction = transform.position - obj.transform.position;
+            direction.Normalize();
+            rb.velocity = direction * character.BlueSpeed;
+            return;
+        }
         //实例化一个属性球
         GameObject attributeBall = (GameObject)Instantiate(Resources.Load("Player/Prefabs/attributeBall"), transform.position, transform.rotation);
         attributeBall.GetComponent<AttributeBallController>().target = obj;

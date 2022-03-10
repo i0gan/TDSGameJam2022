@@ -9,7 +9,7 @@ public class BolckControl : MonoBehaviour
     private SpriteRenderer sr;
     private BoxCollider2D bc;
     public float HowLongTime = 2;
-    private bool PurpleCanKill = true;
+    public bool PurpleCanKill = true;
     //获取系统精灵渲染器SpriteRenderer组件
     private void Awake()
     {
