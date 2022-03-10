@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 5341681552277116261}
   - component: {fileID: 8400203798432545445}
   - component: {fileID: 7182554173443689815}
+  - component: {fileID: 7938334461563433446}
   m_Layer: 6
   m_Name: player
   m_TagString: Player
@@ -33,6 +34,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -128,7 +130,7 @@ Rigidbody2D:
   m_Constraints: 4
 --- !u!95 &2736778834410892159
 Animator:
-  serializedVersion: 3
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -141,6 +143,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
@@ -259,7 +262,7 @@ MonoBehaviour:
   speed: 10
   jumpSpeed: 10
   OrangeJumpSpeed: 16
-  deadHeight: -100
+  BlueSpeed: 40
   OrangeJumpTime: 2
 --- !u!114 &7182554173443689815
 MonoBehaviour:
@@ -273,4 +276,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 848e8afaf15596746a90b3e8da679cb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameController: {fileID: 0}
   ownedAbility: 
+--- !u!114 &7938334461563433446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2736778834410892133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cad78331a9b84c4eae359cd8ec43286, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: 0
+  time: 0
+  ui: {fileID: 0}
