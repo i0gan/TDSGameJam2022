@@ -8,7 +8,8 @@ public class RayGunController : MonoBehaviour{
     public string ownedAbility = null;
 
     void Start(){
-        targetObj = (GameObject)Instantiate(Resources.Load("Player/Prefabs/target"), new Vector3(-99,0,0), transform.rotation);
+        ownedAbility = null;
+        targetObj = (GameObject)Instantiate(Resources.Load("Player/Prefabs/target"), new Vector3(-99,0,-1), transform.rotation);
         lineRenderer = GetComponent<LineRenderer>();
         lineRenderer.startWidth = 0.08f;
         lineRenderer.endWidth = 0.08f;
@@ -35,7 +36,6 @@ public class RayGunController : MonoBehaviour{
         RaycastHit2D info = Physics2D.Raycast(ray.origin, ray.direction, 100, 1 << 7, -10);
 
         if (info.collider != null){
-            Debug.Log(info.collider.name);
             hitObj = info.collider.gameObject;
             hitPos = new Vector3(info.point.x, info.point.y, transform.position.z);
             //绘制框选效果
@@ -57,7 +57,7 @@ public class RayGunController : MonoBehaviour{
     }
 
     void absorbAbility(GameObject obj){
-        AudioManager.GetInstance.PlayAudio(AudioManager.AudioType.Clicked);
+        if(obj.tag == null) return;
         //如果是蓝色方块则赋予巨大的速度
         if (obj.tag == "Blue"){
             Rigidbody2D rb = transform.gameObject.GetComponent<Rigidbody2D>();
@@ -75,6 +75,7 @@ public class RayGunController : MonoBehaviour{
         attributeBall.GetComponent<AttributeBallController>().ability = obj.tag;
         attributeBall.GetComponent<SpriteRenderer>().sprite = obj.GetComponent<SpriteRenderer>().sprite;
         Debug.Log("absorb " + obj.name + " " + obj.tag);
+        GameController.addScore(10);
     }
 
     void giveAbility(GameObject obj){
