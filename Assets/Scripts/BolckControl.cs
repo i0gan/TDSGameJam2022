@@ -62,6 +62,10 @@ public class BolckControl : MonoBehaviour
         {
             sr.sprite = BolckSprite[5]; 
         }
+        else if (gameObject.tag == "Stone")
+        {
+            sr.sprite = BolckSprite[7];
+        }
     }
     //是否具有碰撞体
     private void isBox()
@@ -93,6 +97,10 @@ public class BolckControl : MonoBehaviour
         else if (gameObject.tag == "Purple")
         {
             bc.enabled = true; 
+        }
+        else if (gameObject.tag == "Stone")
+        {
+            bc.enabled = true;
         }
     }
 
@@ -128,6 +136,10 @@ public class BolckControl : MonoBehaviour
         else if (gameObject.tag == "Purple")
         {
             bc.isTrigger = true;
+        }
+        else if (gameObject.tag == "Stone")
+        {
+            bc.isTrigger = false;
         }
     }
     //触发检测
