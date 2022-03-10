@@ -38,14 +38,25 @@ public class RayGunController : MonoBehaviour{
         RaycastHit2D info = Physics2D.Raycast(ray.origin, ray.direction, 100, 1 << 7, -10);
 
 
-
-        if (info.collider != null){
+            if (info.collider != null){
             hitObj = info.collider.gameObject;
             hitPos = new Vector3(info.point.x, info.point.y, transform.position.z);
 
             //绘制射线(绘制在最下层,所以z轴坐标加1)
             lineRenderer.SetPosition(0, transform.position + new Vector3(0, 0, 1));
             lineRenderer.SetPosition(1, hitPos + new Vector3(0, 0, 1));
+
+            //如果是蓝色则赋予巨大的速度
+            if (ownedAbility == "Blue" && Input.GetMouseButtonDown(0)){
+                if (hitObj.tag != "Blue") return;
+                Rigidbody2D rb = transform.gameObject.GetComponent<Rigidbody2D>();
+                CharacterController character = transform.gameObject.GetComponent<CharacterController>();
+
+                Vector3 direction = transform.position - hitObj.transform.position;
+                direction.Normalize();
+                rb.velocity = direction * character.BlueSpeed;
+                return;
+            }
 
             if (hitObj.tag != "Tile"){
                 //绘制框选效果
@@ -70,6 +81,9 @@ public class RayGunController : MonoBehaviour{
         if(obj.tag == "Purple"){
             obj.GetComponent<BolckControl>().PurpleCanKill = false;
         }
+        else if(obj.tag == "vipPurple"){
+            return;
+        }
         GameObject attributeBall = (GameObject)Instantiate(Resources.Load("Player/Prefabs/attributeBall"), obj.transform.position, transform.rotation);
         attributeBall.GetComponent<AttributeBallController>().target = transform.gameObject;
         attributeBall.GetComponent<AttributeBallController>().ability = obj.tag;
@@ -80,17 +94,7 @@ public class RayGunController : MonoBehaviour{
 
     void giveAbility(GameObject obj){
         if (ownedAbility == null) return;
-        //如果是蓝色则赋予巨大的速度
-        if (ownedAbility == "Blue"){
-            if (obj.tag != "Blue") return;
-            Rigidbody2D rb = transform.gameObject.GetComponent<Rigidbody2D>();
-            CharacterController character = transform.gameObject.GetComponent<CharacterController>();
 
-            Vector3 direction = transform.position - obj.transform.position;
-            direction.Normalize();
-            rb.velocity = direction * character.BlueSpeed;
-            return;
-        }
         //实例化一个属性球
         GameObject attributeBall = (GameObject)Instantiate(Resources.Load("Player/Prefabs/attributeBall"), transform.position, transform.rotation);
         attributeBall.GetComponent<AttributeBallController>().target = obj;
