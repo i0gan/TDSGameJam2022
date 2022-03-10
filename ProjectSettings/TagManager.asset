@@ -16,6 +16,7 @@ TagManager:
   - GameVictory
   - Tile
   - block
+  - Stone
   layers:
   - Default
   - TransparentFX
