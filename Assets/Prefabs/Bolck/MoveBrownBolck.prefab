@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 9193523092253718425}
   - component: {fileID: 4880238688325070563}
   - component: {fileID: 3090651969954611689}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: MoveBrownBolck
   m_TagString: Brown
   m_Icon: {fileID: 0}

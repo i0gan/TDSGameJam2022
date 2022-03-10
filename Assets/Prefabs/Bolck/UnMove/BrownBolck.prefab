@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 448428726549314578}
   - component: {fileID: 5791699823680658742}
   - component: {fileID: 7804636982867674188}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: BrownBolck
   m_TagString: Brown
   m_Icon: {fileID: 0}

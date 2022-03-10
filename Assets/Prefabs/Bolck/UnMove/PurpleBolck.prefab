@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8278236485093014171}
   - component: {fileID: 2646805936752384959}
   - component: {fileID: 1771238775215391429}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: PurpleBolck
   m_TagString: Purple
   m_Icon: {fileID: 0}

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1350705594680674349}
   - component: {fileID: 3355542521245258071}
   - component: {fileID: 5844795416233730984}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: MoveStoneBolck
   m_TagString: Stone
   m_Icon: {fileID: 0}

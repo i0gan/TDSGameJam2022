@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4424827451460258262}
   - component: {fileID: 7724032760877115634}
   - component: {fileID: 6277636825302872456}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: RadBolck
   m_TagString: Rad
   m_Icon: {fileID: 0}

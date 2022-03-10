@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3812751795077795483}
   - component: {fileID: 632331608665462753}
   - component: {fileID: 7032470405411240173}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: MoveRadBolck
   m_TagString: Rad
   m_Icon: {fileID: 0}

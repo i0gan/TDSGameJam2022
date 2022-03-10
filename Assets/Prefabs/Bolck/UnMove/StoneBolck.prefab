@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5270709936328750910}
   - component: {fileID: 2268742197918553626}
   - component: {fileID: 2545609883878035296}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: StoneBolck
   m_TagString: Stone
   m_Icon: {fileID: 0}

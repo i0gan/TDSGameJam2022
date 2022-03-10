@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1564949575351935434}
   - component: {fileID: 4895046211697950958}
   - component: {fileID: 9205728353480939924}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: OrangeBolck
   m_TagString: Orange
   m_Icon: {fileID: 0}

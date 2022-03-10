@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4528040674734678622}
   - component: {fileID: 7534441637619188602}
   - component: {fileID: 6097967843434666496}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: GreyBolck
   m_TagString: Grey
   m_Icon: {fileID: 0}
