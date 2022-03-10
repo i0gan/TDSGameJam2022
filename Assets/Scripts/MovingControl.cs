@@ -33,6 +33,7 @@ public class MovingControl : MonoBehaviour
                 Mathf.Abs(transform.position.x - player.transform.position.x) < 5)
             CanMove = true;
     }
+
     //控制方块运动的方法
     public void BolckMove()
     {
