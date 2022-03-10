@@ -6,22 +6,32 @@ public class MovingControl : MonoBehaviour
 {
 
     public bool CanMove = false;//是否可动（挂接射线探测，可以实现玩家触发机关）
+    public float triggerHeight = 20;//机关触发的高度
     public float Bolckspeed;//运动速度
     public bool vertical = true;//方块垂直运动
     public float changeTime = 3.0f;//往复运动周期
     float timer;//计时器
     int fangxiang = 1;//方向
+    private GameObject player;
     void Start()
     {
-
+        player = GameObject.Find("player");
     }
     void Update()
     {
+        cheakTrigger();
         if (CanMove)
         {
             BolckMove();
             Timer();
         }
+    }
+
+    void cheakTrigger()
+    {
+        if ((uint)(transform.position.y - player.transform.position.y) < triggerHeight &&
+                Mathf.Abs(transform.position.x - player.transform.position.x) < 5)
+            CanMove = true;
     }
     //控制方块运动的方法
     public void BolckMove()
