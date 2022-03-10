@@ -24,6 +24,7 @@ public class GameController:MonoBehaviour{
     public void addScore(int point){
         score += point;
         ui.SetScoresNumber(score);
+        if(score>30) victory();
     }
 
     public void gameOver(){
@@ -34,6 +35,6 @@ public class GameController:MonoBehaviour{
 
     }
     public void victory(){
-
+        ui.ShowGamePass(score, (int)time);
     }
 }
