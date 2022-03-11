@@ -33,7 +33,9 @@ public class AudioManager : MonoBehaviour
         GameGetScore,  // 得分音效
         Fired, // 开枪
         Run,//跑步
-        Magic
+        Magic,
+        Jump,
+        BlockChange,
 
     }
 
@@ -58,6 +60,8 @@ public class AudioManager : MonoBehaviour
     private AudioClip firedAudio;
     private AudioClip runAudio;
     private AudioClip magicAudio;
+    private AudioClip blockChangeAudio;
+    private AudioClip jumpAudio;
     private Boolean isPlayBGM = true;
 
 
@@ -130,6 +134,16 @@ public class AudioManager : MonoBehaviour
                 case AudioType.GameGetScore:
                     {
                         gameGetScoreAudio = audioManager[i].audioClip;
+                    }
+                    break;
+                case AudioType.Jump:
+                    {
+                        jumpAudio = audioManager[i].audioClip;
+                    }
+                    break;
+                case AudioType.BlockChange:
+                    {
+                        blockChangeAudio = audioManager[i].audioClip;
                     }
                     break;
                 default: break;
@@ -212,6 +226,18 @@ public class AudioManager : MonoBehaviour
             case AudioType.GameGetScore:
                 {
                     audioSource_Sound.clip = gameGetScoreAudio;
+                    audioSource_Sound.Play();
+                }
+                break;
+            case AudioType.Jump:
+                {
+                    audioSource_Sound.clip = jumpAudio;
+                    audioSource_Sound.Play();
+                }
+                break;
+            case AudioType.BlockChange:
+                {
+                    audioSource_Sound.clip = blockChangeAudio;
                     audioSource_Sound.Play();
                 }
                 break;

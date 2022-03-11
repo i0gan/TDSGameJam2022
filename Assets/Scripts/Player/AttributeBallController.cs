@@ -13,9 +13,16 @@ public class AttributeBallController : MonoBehaviour{
 
         //¾àÀë×ã¹»½Ó½üÊ±
         if (Vector3.Distance(transform.position, target.transform.position)<0.1){
-            if (target.tag == "Player") 
+            if (target.tag == "Player")
+            {
                 target.GetComponent<RayGunController>().ownedAbility = ability;
-            else target.tag = ability;
+                AudioManager.GetInstance.PlayAudio(AudioManager.AudioType.Magic);
+            }
+            else
+            {
+                target.tag = ability;
+                AudioManager.GetInstance.PlayAudio(AudioManager.AudioType.BlockChange);
+            }
             Destroy(transform.gameObject);
         }
             

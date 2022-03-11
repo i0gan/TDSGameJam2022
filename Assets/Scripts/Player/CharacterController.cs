@@ -59,6 +59,7 @@ public class CharacterController : MonoBehaviour{
         if (Input.GetButtonDown("Jump") && (Mathf.Abs(rb.velocity.y) <= 0.1 || CanJump == true))
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpSpeed);
+            AudioManager.GetInstance.PlayAudio(AudioManager.AudioType.Jump);
         }
     }
 

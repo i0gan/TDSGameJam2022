@@ -152,6 +152,7 @@ public class BolckControl : MonoBehaviour
             {
                 Destroy(gameObject);
                 GameObject.Find("player").GetComponent<GameController>().addScore(yellowScore);
+                AudioManager.GetInstance.PlayAudio(AudioManager.AudioType.GameGetScore);
             }
             else if (gameObject.tag == "Rad")
             {
