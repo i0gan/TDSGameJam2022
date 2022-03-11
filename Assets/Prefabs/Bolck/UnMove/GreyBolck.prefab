@@ -26,9 +26,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4467133072027415819}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 0}
+  m_LocalScale: {x: 0.88518, y: 0.8844285, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: b0bf1f51cc61fe344a07e2ab39fc4ae6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d29376a9fd978604990ae1a24d58e187, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -98,18 +98,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0038052797, y: 0.0010321438}
+  m_Offset: {x: 0.0007404387, y: 0.011139274}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.28, y: 1.28}
+    oldSize: {x: 1.2, y: 1.2}
     newSize: {x: 0.59, y: 0.59}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.2809136, y: 1.2786269}
+  m_Size: {x: 1.1990898, y: 1.1775558}
   m_EdgeRadius: 0
 --- !u!114 &6097967843434666496
 MonoBehaviour:
@@ -124,12 +124,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BolckSprite:
-  - {fileID: 21300000, guid: b0bf1f51cc61fe344a07e2ab39fc4ae6, type: 3}
-  - {fileID: 21300000, guid: 577e6959987123347ba14169beeaad58, type: 3}
-  - {fileID: 21300000, guid: e75135e1ab70b994bb16f3a1a5957974, type: 3}
-  - {fileID: 21300000, guid: cc728d0f11f87944bacd4c5e69f097fe, type: 3}
-  - {fileID: 21300000, guid: 28d7184ad81a8074ea893d16c1124924, type: 3}
+  - {fileID: 21300000, guid: d29376a9fd978604990ae1a24d58e187, type: 3}
+  - {fileID: 21300000, guid: a0c1b620c9346024d99ef420b0237438, type: 3}
+  - {fileID: 21300000, guid: c9315575012e07448b1a8178f889c23b, type: 3}
+  - {fileID: 21300000, guid: 7eb6dd0fc271d08478b2f50d302a04f4, type: 3}
+  - {fileID: 21300000, guid: f2a7be2ca77727b48b64b660c4145fa4, type: 3}
   - {fileID: 21300000, guid: 790d5960f1ec566429e83c511bb78be0, type: 3}
   - {fileID: 21300000, guid: 1c6a94bb183de854881f716b0fc3fadf, type: 3}
   - {fileID: 21300000, guid: cfe356c47d7828f4f926527b577ec479, type: 3}
   HowLongTime: 2
+  PurpleCanKill: 1
