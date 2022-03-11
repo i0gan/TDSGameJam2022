@@ -78,7 +78,7 @@ public class RayGunController : MonoBehaviour{
         if(obj.tag == null) return;
 
         //实例化一个属性球
-        AudioManager.GetInstance.PlayAudio(AudioManager.AudioType.Magic);
+        //AudioManager.GetInstance.PlayAudio(AudioManager.AudioType.Magic);
         if(obj.tag == "Purple"){
             obj.GetComponent<BolckControl>().PurpleCanKill = false;
         }

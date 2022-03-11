@@ -245,7 +245,7 @@ MonoBehaviour:
   jumpSpeed: 13
   OrangeJumpSpeed: 15
   BlueSpeed: 40
-  OrangeJumpTime: 2
+  OrangeJumpTime: 1
 --- !u!114 &7182554173443689815
 MonoBehaviour:
   m_ObjectHideFlags: 0
