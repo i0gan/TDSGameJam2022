@@ -33,6 +33,7 @@ public class AudioManager : MonoBehaviour
         GameGetScore,  // 得分音效
         Fired, // 开枪
         Run,//跑步
+        Magic
 
     }
 
@@ -56,6 +57,7 @@ public class AudioManager : MonoBehaviour
     private AudioClip gameGetScoreAudio;
     private AudioClip firedAudio;
     private AudioClip runAudio;
+    private AudioClip magicAudio;
     private Boolean isPlayBGM = true;
 
 
@@ -120,7 +122,11 @@ public class AudioManager : MonoBehaviour
                         runAudio = audioManager[i].audioClip;
                     }
                     break;
-
+                case AudioType.Magic:
+                    {
+                        magicAudio = audioManager[i].audioClip;
+                    }
+                    break;
                 default: break;
             }
 
@@ -189,6 +195,12 @@ public class AudioManager : MonoBehaviour
             case AudioType.Run:
                 {
                     audioSource_Sound.clip = runAudio;
+                    audioSource_Sound.Play();
+                }
+                break;
+            case AudioType.Magic:
+                {
+                    audioSource_Sound.clip = magicAudio;
                     audioSource_Sound.Play();
                 }
                 break;

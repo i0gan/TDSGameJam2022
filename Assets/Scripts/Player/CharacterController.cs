@@ -19,6 +19,7 @@ public class CharacterController : MonoBehaviour{
 
     void Start(){
         rb = GetComponent<Rigidbody2D>();
+        AudioManager.GetInstance.PlayAudio(AudioManager.AudioType.BGM_MainScene);
     }
 
     // Update is called once per frame
@@ -29,7 +30,7 @@ public class CharacterController : MonoBehaviour{
 
     }
     void Update(){
-        AudioManager.GetInstance.PlayAudio(AudioManager.AudioType.Run);
+        AudioManager.GetInstance.PlayAudio(AudioManager.AudioType.Clicked);
         isCanJump();
         Jump();
     }
