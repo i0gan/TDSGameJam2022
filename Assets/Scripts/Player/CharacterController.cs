@@ -15,6 +15,8 @@ public class CharacterController : MonoBehaviour{
     private float Timer = 0;
     public float OrangeJumpTime = 2;
 
+    Vector3 tran;
+
 
     void Start(){
         rb = GetComponent<Rigidbody2D>();
@@ -22,9 +24,15 @@ public class CharacterController : MonoBehaviour{
     }
 
     // Update is called once per frame
-    void Update(){
+    private void FixedUpdate()
+    {
         Move();
+        
+
+    }
+    void Update(){
         isCanJump();
+        Jump();
     }
 
 
@@ -34,20 +42,27 @@ public class CharacterController : MonoBehaviour{
         float horizontal = Input.GetAxis("Horizontal");
 
         if (horizontal != 0){
-            rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+            //rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+            tran = new Vector3 (horizontal * Time.deltaTime * speed, 0, 0);
+            rb.transform.Translate(tran);
+            
 
             //通过x轴缩放改变角色朝向
             float x_scale = (horizontal > 0 ? 1 : -1) * Mathf.Abs(transform.localScale.x);
             transform.localScale = new Vector3(x_scale, transform.localScale.y, transform.localScale.z);
         }
 
+        
+    }
+
+    void Jump()
+    {
         //角色跳跃
-        if (Input.GetButtonDown("Jump")&& (Mathf.Abs(rb.velocity.y) <= 0.1||CanJump==true))
+        if (Input.GetButtonDown("Jump") && (Mathf.Abs(rb.velocity.y) <= 0.1 || CanJump == true))
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpSpeed);
         }
     }
-
 
     //碰到橙色物块跳动
     //ghy3
