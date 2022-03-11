@@ -3476,7 +3476,9 @@ Tilemap:
   m_AnimatedTiles: {}
   m_TileAssetArray:
   - m_RefCount: 288
-    m_Data: {fileID: 11400000, guid: 74c3fd36ed08a3c4787981ca73d01316, type: 2}
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   m_TileSpriteArray:
   - m_RefCount: 288
     m_Data: {fileID: 21300000, guid: 0bc0e75b0f9c02e40b2c45114c402433, type: 3}
@@ -3538,7 +3540,7 @@ TilemapCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_UsedByComposite: 1
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
@@ -3712,6 +3714,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: VIPMovePurpleBolck
       objectReference: {fileID: 0}
+    - target: {fileID: 6289327247397301751, guid: 1f248e8b1e15c91458aa9da1f2f601f1, type: 3}
+      propertyPath: m_TagString
+      value: vipPurple
+      objectReference: {fileID: 0}
     - target: {fileID: 7231026569236583496, guid: 1f248e8b1e15c91458aa9da1f2f601f1, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -3793,8 +3799,8 @@ Camera:
   m_GameObject: {fileID: 884422526}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.6886792, g: 0.6886792, b: 0.6886792, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
