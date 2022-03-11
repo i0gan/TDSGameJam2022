@@ -42,12 +42,21 @@ public class MovingControl : MonoBehaviour
         if (vertical)
         {
             position.y = position.y + Time.deltaTime* Bolckspeed * fangxiang;
+            if (gameObject.tag == "Rad")
+            {
+                gameObject.transform.Rotate(0, 0, 2);
+            }
 
         }
         //x
         else
         {
             position.x = position.x + Time.deltaTime * Bolckspeed * fangxiang;
+            if (gameObject.tag == "Rad")
+            {
+                gameObject.transform.Rotate(0, 0, 2);
+                
+            }
 
         }
         gameObject.transform.position = position;
