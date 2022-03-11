@@ -42,7 +42,7 @@ public class CharacterController : MonoBehaviour{
         }
 
         //½ÇÉ«ÌøÔ¾
-        if (Input.GetButtonDown("Jump")&& (rb.velocity.y == 0||CanJump==true))
+        if (Input.GetButtonDown("Jump")&& (Mathf.Abs(rb.velocity.y) <= 0.1||CanJump==true))
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpSpeed);
         }

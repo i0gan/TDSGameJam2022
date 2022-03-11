@@ -48,13 +48,13 @@ public class RayGunController : MonoBehaviour{
 
             //如果是蓝色则赋予巨大的速度
             if (ownedAbility == "Blue" && Input.GetMouseButtonDown(0)){
-                if (hitObj.tag != "Blue") return;
                 Rigidbody2D rb = transform.gameObject.GetComponent<Rigidbody2D>();
                 CharacterController character = transform.gameObject.GetComponent<CharacterController>();
 
-                Vector3 direction = transform.position - hitObj.transform.position;
-                direction.Normalize();
-                rb.velocity = direction * character.BlueSpeed;
+                Vector3 direction3 = transform.position - hitPos;
+                Vector2 direction2 = new Vector2(direction3.x, direction3.y);
+                direction2.Normalize();
+                rb.velocity = direction2 * character.BlueSpeed;
                 return;
             }
 
