@@ -17,6 +17,7 @@ TagManager:
   - Tile
   - block
   - Stone
+  - vipPurple
   layers:
   - Default
   - TransparentFX
@@ -26,7 +27,7 @@ TagManager:
   - UI
   - Player
   - Blocks
-  - 
+  - Rad
   - 
   - 
   - 
