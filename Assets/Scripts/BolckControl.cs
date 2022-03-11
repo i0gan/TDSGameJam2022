@@ -168,6 +168,10 @@ public class BolckControl : MonoBehaviour
                     GameObject.Find("player").SendMessage("reStart");
                 }
             }
+            else if (gameObject.tag == "GameVictory")
+            {
+                GameObject.Find("player").SendMessage("victory");
+            }
         }
     }
     //Åö×²¼ì²â
