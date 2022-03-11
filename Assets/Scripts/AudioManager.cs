@@ -127,6 +127,11 @@ public class AudioManager : MonoBehaviour
                         magicAudio = audioManager[i].audioClip;
                     }
                     break;
+                case AudioType.GameGetScore:
+                    {
+                        gameGetScoreAudio = audioManager[i].audioClip;
+                    }
+                    break;
                 default: break;
             }
 
@@ -201,6 +206,12 @@ public class AudioManager : MonoBehaviour
             case AudioType.Magic:
                 {
                     audioSource_Sound.clip = magicAudio;
+                    audioSource_Sound.Play();
+                }
+                break;
+            case AudioType.GameGetScore:
+                {
+                    audioSource_Sound.clip = gameGetScoreAudio;
                     audioSource_Sound.Play();
                 }
                 break;

@@ -23,6 +23,7 @@ public class GameController:MonoBehaviour{
     }
 
     public void addScore(int point){
+        AudioManager.GetInstance.PlayAudio(AudioManager.AudioType.GameGetScore);
         score += point;
         ui.SetScoresNumber(score);
     }
