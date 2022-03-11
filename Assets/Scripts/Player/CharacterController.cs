@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class CharacterController : MonoBehaviour{
     private Rigidbody2D rb;
-    private Collider2D collider;
 
     public float speed = 14;
     public float jumpSpeed = 7;
@@ -20,7 +19,6 @@ public class CharacterController : MonoBehaviour{
 
     void Start(){
         rb = GetComponent<Rigidbody2D>();
-        collider = GetComponent<Collider2D>();
     }
 
     // Update is called once per frame
@@ -31,6 +29,7 @@ public class CharacterController : MonoBehaviour{
 
     }
     void Update(){
+        AudioManager.GetInstance.PlayAudio(AudioManager.AudioType.Run);
         isCanJump();
         Jump();
     }

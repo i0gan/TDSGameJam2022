@@ -32,6 +32,7 @@ public class AudioManager : MonoBehaviour
         GameFail,      // 关卡失败音效
         GameGetScore,  // 得分音效
         Fired, // 开枪
+        Run,//跑步
 
     }
 
@@ -54,6 +55,7 @@ public class AudioManager : MonoBehaviour
 
     private AudioClip gameGetScoreAudio;
     private AudioClip firedAudio;
+    private AudioClip runAudio;
     private Boolean isPlayBGM = true;
 
 
@@ -111,6 +113,11 @@ public class AudioManager : MonoBehaviour
                 case AudioType.Fired:
                     {
                         gameHoverAudio = audioManager[i].audioClip;
+                    }
+                    break;
+                case AudioType.Run:
+                    {
+                        runAudio = audioManager[i].audioClip;
                     }
                     break;
 
@@ -179,7 +186,12 @@ public class AudioManager : MonoBehaviour
                     audioSource_Sound.Play();
                 }
                 break;
-
+            case AudioType.Run:
+                {
+                    audioSource_Sound.clip = runAudio;
+                    audioSource_Sound.Play();
+                }
+                break;
             default: break;
         }
     }
