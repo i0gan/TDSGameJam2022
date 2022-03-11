@@ -10,6 +10,7 @@ public class BolckControl : MonoBehaviour
     private BoxCollider2D bc;
     public float HowLongTime = 2;
     public bool PurpleCanKill = true;
+    public int yellowScore = 100;
     //获取系统精灵渲染器SpriteRenderer组件
     private void Awake()
     {
@@ -150,7 +151,7 @@ public class BolckControl : MonoBehaviour
             if(gameObject.tag== "Yellow")
             {
                 Destroy(gameObject);
-                GameObject.Find("player").SendMessage("AddScore");
+                GameObject.Find("player").GetComponent<GameController>().addScore(yellowScore);
             }
             else if (gameObject.tag == "Rad")
             {
