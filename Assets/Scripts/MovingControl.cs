@@ -7,6 +7,7 @@ public class MovingControl : MonoBehaviour
 
     public bool CanMove = false;//是否可动（挂接射线探测，可以实现玩家触发机关）
     public float triggerHeight = 20;//机关触发的高度
+    public float triggerWidth = 5;
     public float Bolckspeed;//运动速度
     public bool vertical = true;//方块垂直运动
     public float changeTime = 3.0f;//往复运动周期
@@ -30,7 +31,7 @@ public class MovingControl : MonoBehaviour
     void cheakTrigger()
     {
         if ((uint)(transform.position.y - player.transform.position.y) < triggerHeight &&
-                Mathf.Abs(transform.position.x - player.transform.position.x) < 5)
+                Mathf.Abs(transform.position.x - player.transform.position.x) < triggerWidth)
             CanMove = true;
     }
 
@@ -42,7 +43,7 @@ public class MovingControl : MonoBehaviour
         if (vertical)
         {
             position.y = position.y + Time.deltaTime* Bolckspeed * fangxiang;
-            if (gameObject.tag == "Rad")
+            if (gameObject.tag=="Rad")
             {
                 gameObject.transform.Rotate(0, 0, 2);
             }
