@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4424827451460258262}
   - component: {fileID: 7724032760877115634}
   - component: {fileID: 6277636825302872456}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: RadBolck
   m_TagString: Rad
   m_Icon: {fileID: 0}
@@ -134,3 +134,4 @@ MonoBehaviour:
   - {fileID: 21300000, guid: cfe356c47d7828f4f926527b577ec479, type: 3}
   HowLongTime: 2
   PurpleCanKill: 1
+  yellowScore: 100

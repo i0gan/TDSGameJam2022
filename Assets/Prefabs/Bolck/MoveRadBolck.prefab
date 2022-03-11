@@ -27,9 +27,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7032470405411240170}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 0}
+  m_LocalScale: {x: 0.68172, y: 0.68172, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -99,7 +99,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0020266175, y: 0.016988426}
+  m_Offset: {x: 0.0031708926, y: 0.021153271}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -110,7 +110,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.83535147, y: 0.75471157}
+  m_Size: {x: 0.8566518, y: 0.7823018}
   m_EdgeRadius: 0
 --- !u!114 &632331608665462753
 MonoBehaviour:
@@ -135,6 +135,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: cfe356c47d7828f4f926527b577ec479, type: 3}
   HowLongTime: 2
   PurpleCanKill: 1
+  yellowScore: 100
 --- !u!114 &7032470405411240173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,6 +150,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CanMove: 1
   triggerHeight: 20
-  Bolckspeed: 1
-  vertical: 1
-  changeTime: 0.2
+  Bolckspeed: 2
+  vertical: 0
+  changeTime: 6.3

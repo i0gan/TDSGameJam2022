@@ -102,10 +102,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 100
+  m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 2
+  m_GravityScale: 3
   m_Material: {fileID: 6200000, guid: df5f9179aa9af494b9e0fe9a6d091af3, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -241,9 +241,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3b5934f387f7bb4c87f4234a2834eb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  jumpSpeed: 10
-  OrangeJumpSpeed: 16
+  speed: 5
+  jumpSpeed: 13
+  OrangeJumpSpeed: 15
   BlueSpeed: 40
   OrangeJumpTime: 2
 --- !u!114 &7182554173443689815
