@@ -36,7 +36,7 @@ public class AudioManager : MonoBehaviour
         Magic,
         Jump,
         BlockChange,
-
+        Victory
     }
 
     [System.Serializable]
@@ -62,6 +62,7 @@ public class AudioManager : MonoBehaviour
     private AudioClip magicAudio;
     private AudioClip blockChangeAudio;
     private AudioClip jumpAudio;
+    private AudioClip victoryAudio;
     private Boolean isPlayBGM = true;
 
 
@@ -144,6 +145,11 @@ public class AudioManager : MonoBehaviour
                 case AudioType.BlockChange:
                     {
                         blockChangeAudio = audioManager[i].audioClip;
+                    }
+                    break;
+                case AudioType.Victory:
+                    {
+                        victoryAudio = audioManager[i].audioClip;
                     }
                     break;
                 default: break;
@@ -238,6 +244,12 @@ public class AudioManager : MonoBehaviour
             case AudioType.BlockChange:
                 {
                     audioSource_Sound.clip = blockChangeAudio;
+                    audioSource_Sound.Play();
+                }
+                break;
+            case AudioType.Victory:
+                {
+                    audioSource_Sound.clip = victoryAudio;
                     audioSource_Sound.Play();
                 }
                 break;

@@ -32,5 +32,6 @@ public class GameController:MonoBehaviour{
     }
     public void victory(){
         ui.ShowGamePass(score, (int)time);
+        AudioManager.GetInstance.PlayAudio(AudioManager.AudioType.Victory);
     }
 }
