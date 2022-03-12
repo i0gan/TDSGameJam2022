@@ -28,7 +28,6 @@ public class GameController:MonoBehaviour{
     }
 
     public void reStart(){
-        AudioManager.GetInstance.PlayAudio(AudioManager.AudioType.GameFail);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
     public void victory(){
