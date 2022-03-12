@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2198603082539656881}
   - component: {fileID: 3367087866425804891}
   - component: {fileID: 6953032345446764497}
+  - component: {fileID: -6103144167476884089}
   m_Layer: 7
   m_Name: Blue
   m_TagString: Blue
@@ -110,3 +111,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.1856617, y: 1.1829233}
   m_EdgeRadius: 0
+--- !u!114 &-6103144167476884089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3283942506812006158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b245e0d4f9a6854c87f228d3d5c26fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BolckSprite:
+  - {fileID: 21300000, guid: d29376a9fd978604990ae1a24d58e187, type: 3}
+  - {fileID: 21300000, guid: a0c1b620c9346024d99ef420b0237438, type: 3}
+  - {fileID: 21300000, guid: c9315575012e07448b1a8178f889c23b, type: 3}
+  - {fileID: 21300000, guid: 7eb6dd0fc271d08478b2f50d302a04f4, type: 3}
+  - {fileID: 21300000, guid: f2a7be2ca77727b48b64b660c4145fa4, type: 3}
+  - {fileID: 21300000, guid: 790d5960f1ec566429e83c511bb78be0, type: 3}
+  - {fileID: 21300000, guid: 1c6a94bb183de854881f716b0fc3fadf, type: 3}
+  - {fileID: 21300000, guid: cfe356c47d7828f4f926527b577ec479, type: 3}
+  HowLongTime: 2
+  PurpleCanKill: 1
+  yellowScore: 100

@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 4467133072027415819}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.88518, y: 0.8844285, z: 0}
+  m_LocalScale: {x: 1.654136, y: 0.8844285, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d29376a9fd978604990ae1a24d58e187, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -134,3 +134,4 @@ MonoBehaviour:
   - {fileID: 21300000, guid: cfe356c47d7828f4f926527b577ec479, type: 3}
   HowLongTime: 2
   PurpleCanKill: 1
+  yellowScore: 100
