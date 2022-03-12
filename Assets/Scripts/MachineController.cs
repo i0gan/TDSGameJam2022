@@ -28,11 +28,13 @@ public class MachineController : MonoBehaviour
         if (haveTrigger) return;
         haveTrigger = true;
         isWork = true;
+        GameObject.Find("player").GetComponent<GameController>().setSubtitle("机关已触发");
         Invoke("stopWork", moveTime);
     }
     void stopWork()
     {
         isWork = false;
         GetComponent<MachineController>().enabled = false;
+        GameObject.Find("player").GetComponent<GameController>().HideSubtitle();
     }
 }
