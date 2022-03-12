@@ -125,7 +125,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BolckSprite:
   - {fileID: 21300000, guid: d29376a9fd978604990ae1a24d58e187, type: 3}
-  - {fileID: 21300000, guid: a0c1b620c9346024d99ef420b0237438, type: 3}
+  - {fileID: 21300000, guid: f2a7be2ca77727b48b64b660c4145fa4, type: 3}
   - {fileID: 21300000, guid: c9315575012e07448b1a8178f889c23b, type: 3}
   - {fileID: 21300000, guid: 7eb6dd0fc271d08478b2f50d302a04f4, type: 3}
   - {fileID: 21300000, guid: f2a7be2ca77727b48b64b660c4145fa4, type: 3}
