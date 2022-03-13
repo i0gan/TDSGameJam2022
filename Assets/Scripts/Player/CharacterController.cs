@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CharacterController : MonoBehaviour{
     private Rigidbody2D rb;
+    private Animator animator;
 
     public float speed = 14;
     public float jumpSpeed = 7;
@@ -13,18 +14,22 @@ public class CharacterController : MonoBehaviour{
     private bool CanJump = false;
     private float Timer = 0;
     public float OrangeJumpTime = 2;
+    public enum State {Wait,Walk,Magic};
+    int state;
 
     Vector3 tran;
 
 
     void Start(){
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     private void FixedUpdate()
     {
         Move();
+        Debug.Log(animator.GetInteger("state"));
         
 
     }
@@ -42,6 +47,7 @@ public class CharacterController : MonoBehaviour{
         if (horizontal != 0){
             //rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
             tran = new Vector3 (horizontal * Time.deltaTime * speed, 0, 0);
+            animator.SetInteger("state",1);
             rb.transform.Translate(tran);
             
 
@@ -50,7 +56,7 @@ public class CharacterController : MonoBehaviour{
             transform.localScale = new Vector3(x_scale, transform.localScale.y, transform.localScale.z);
         }
 
-        
+
     }
 
     void Jump()
@@ -58,6 +64,7 @@ public class CharacterController : MonoBehaviour{
         //½ÇÉ«ÌøÔ¾
         if (Input.GetButtonDown("Jump") && (Mathf.Abs(rb.velocity.y) <= 0.1 || CanJump == true))
         {
+            animator.SetInteger("state", 1);
             rb.velocity = new Vector2(rb.velocity.x, jumpSpeed);
             AudioManager.GetInstance.PlayAudio(AudioManager.AudioType.Jump);
         }

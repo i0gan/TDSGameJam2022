@@ -7,10 +7,12 @@ public class RayGunController : MonoBehaviour{
     private GameObject targetObj;
     public GameController gameController;
     public string ownedAbility = null;
+    private Animator animator;
 
     void Start(){
         ownedAbility = null;
         gameController = GetComponent<GameController>();
+        animator = gameController.GetComponent<Animator>();
         targetObj = (GameObject)Instantiate(Resources.Load("Player/Prefabs/target"), new Vector3(-99,0,-1), transform.rotation);
         lineRenderer = GetComponent<LineRenderer>();
         lineRenderer.startWidth = 0.08f;
@@ -77,6 +79,7 @@ public class RayGunController : MonoBehaviour{
     void absorbAbility(GameObject obj){
         if(obj.tag == null) return;
 
+        animator.SetInteger("state", 2);
         //实例化一个属性球
         //AudioManager.GetInstance.PlayAudio(AudioManager.AudioType.Magic);
         if(obj.tag == "Purple"){
@@ -90,12 +93,12 @@ public class RayGunController : MonoBehaviour{
         attributeBall.GetComponent<AttributeBallController>().ability = obj.tag;
         attributeBall.GetComponent<SpriteRenderer>().sprite = obj.GetComponent<SpriteRenderer>().sprite;
         Debug.Log("absorb " + obj.name + " " + obj.tag);
-        gameController.addScore(10);
     }
 
     void giveAbility(GameObject obj){
         if (ownedAbility == null) return;
 
+        animator.SetInteger("state", 2);
         //实例化一个属性球
         GameObject attributeBall = (GameObject)Instantiate(Resources.Load("Player/Prefabs/attributeBall"), transform.position, transform.rotation);
         attributeBall.GetComponent<AttributeBallController>().target = obj;

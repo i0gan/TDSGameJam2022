@@ -13,6 +13,7 @@ public class AttributeBallController : MonoBehaviour{
 
         //¾àÀë×ã¹»½Ó½üÊ±
         if (Vector3.Distance(transform.position, target.transform.position)<0.1){
+            GameObject.Find("player").GetComponent<Animator>().SetInteger("state",0);
             if (target.tag == "Player")
             {
                 target.GetComponent<RayGunController>().ownedAbility = ability;
