@@ -14,7 +14,7 @@ public class EasterEggController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            GameObject.Find("player").GetComponent<GameController>().setSubtitle("¹§Ï²Äã·¢ÏÖ²Êµ°");
+            GameObject.Find("player").GetComponent<GameController>().setSubtitle("£¡£¡£¡ Money~ Money~~ Money~~~ £¡£¡£¡");
             hideWall.SetActive(false);
             Invoke("Delete", 3);
         }
