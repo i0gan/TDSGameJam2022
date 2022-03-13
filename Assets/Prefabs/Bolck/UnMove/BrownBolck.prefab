@@ -131,7 +131,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: f2a7be2ca77727b48b64b660c4145fa4, type: 3}
   - {fileID: 21300000, guid: 790d5960f1ec566429e83c511bb78be0, type: 3}
   - {fileID: 21300000, guid: 1c6a94bb183de854881f716b0fc3fadf, type: 3}
-  - {fileID: 21300000, guid: cfe356c47d7828f4f926527b577ec479, type: 3}
+  - {fileID: 21300000, guid: 2ef2e96f38c310e49a30bc3e4d89f949, type: 3}
   HowLongTime: 0.3
   PurpleCanKill: 1
   yellowScore: 100
