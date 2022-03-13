@@ -8,11 +8,35 @@ public class AttributeBallController : MonoBehaviour{
     public string ability = null;
 
 
-    void Update(){
-        if(target == null) return;
+    //void Update(){
+    //    if(target == null) return;
 
-        //¾àÀë×ã¹»½Ó½üÊ±
-        if (Vector3.Distance(transform.position, target.transform.position)<0.1){
+    //    //ï¿½ï¿½ï¿½ï¿½ï¿½ã¹»ï¿½Ó½ï¿½Ê±
+    //    if (Vector3.Distance(transform.position, target.transform.position)<0.3){
+    //        if (target.tag == "Player")
+    //        {
+    //            target.GetComponent<RayGunController>().ownedAbility = ability;
+    //            AudioManager.GetInstance.PlayAudio(AudioManager.AudioType.Magic);
+    //        }
+    //        else
+    //        {
+    //            target.tag = ability;
+    //            AudioManager.GetInstance.PlayAudio(AudioManager.AudioType.BlockChange);
+    //        }
+    //        Destroy(transform.gameObject);
+    //    }
+            
+    //    Vector3 direction = target.transform.position - transform.position;
+    //    direction.Normalize();
+    //    transform.position = transform.position + direction * speed * Time.deltaTime;
+    //}
+    void FixedUpdate()
+    {
+        if (target == null) return;
+
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ã¹»ï¿½Ó½ï¿½Ê±
+        if (Vector3.Distance(transform.position, target.transform.position) < 0.3)
+        {
             GameObject.Find("player").GetComponent<Animator>().SetInteger("state",0);
             if (target.tag == "Player")
             {
@@ -26,11 +50,11 @@ public class AttributeBallController : MonoBehaviour{
             }
             Destroy(transform.gameObject);
         }
-            
+
         Vector3 direction = target.transform.position - transform.position;
         direction.Normalize();
         transform.position = transform.position + direction * speed * Time.deltaTime;
     }
 
-    
+
 }

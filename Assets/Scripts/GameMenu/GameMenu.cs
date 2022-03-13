@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+//using UnityEditor;
 public class GameMenu : MonoBehaviour
 {
     private static int level = 1; // 关卡
@@ -53,7 +54,7 @@ public class GameMenu : MonoBehaviour
 
     public void QuitGame()
     {
-        UnityEditor.EditorApplication.isPlaying = false;
+        //UnityEditor.EditorApplication.isPlaying = false;
         Application.Quit();
     }
     public void NextLevel()
